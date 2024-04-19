@@ -1,26 +1,28 @@
 import React from "react";
+import Navbar from "../component/navbar";
+
 
 const Homepage = () => {
   return (
-    <div>
-      {/* Navbar */}
-      <nav className="bg-white py-4 px-6 flex justify-between items-center">
-        {/* Logo */}
+    <div className="min-h-[100vh]">
+      <Navbar />
+      
+      
+      {/* <nav className="bg-white py-4 px-6 flex justify-between items-center">
         <div>
-          <img src="assets/logo.png" alt="logo" />
+          <img src="assets/logo.png" alt="logo" className="w-32"/>
         </div>
         
-        {/* Navbar Links */}
-        <div className="flex space-x-20 items-center"> {/* Added items-center class */}
+        <div className="flex space-x-20 items-center"> 
           <a href="#" className="text-blue-950 hover:text-gray-700">About Us</a>
           <a href="#" className="text-blue-950 hover:text-gray-700">Sign Your Company</a>
           <a href="#" className="text-blue-950 hover:text-gray-700">Log In</a>
           <button className="bg-sky-950 text-white font-semibold py-2 px-4 rounded-md">Sign Up</button>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Main Section */}
-      <section className="bg-blue-950 text-white min-h-[90vh]">
+      <section className="bg-blue-950 text-white min-h-[90vh] ">
         {/* Left Section */}
         <div className="w-full relative flex justify-between items-center">
           <div className="w-1/2 py-12 px-20">
