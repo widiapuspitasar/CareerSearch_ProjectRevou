@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Main = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -37,13 +37,13 @@ const Navbar = () => {
                         </button>
                         <ul className="text-white text-lg font-poppins font-semibold">
                             <li className="py-2">
-                                <Link to="/aboutus" className="block px-4 py-2">About Us</Link>
+                                <Link to="/" className="block px-4 py-2">Jobs</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/yourcompany" className="block px-4 py-2">Sign Your Company</Link>
+                                <Link to="/" className="block px-4 py-2">Community</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/login"  className="block px-4 py-2">Log In</Link>
+                                <Link to="/"  className="block px-4 py-2">Blog</Link>
                             </li>
                         </ul>
                         <Link to="signup" className=" lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-sky-950 hover:bg-blue-600 text-sm text-white font-semibold  rounded-md transition duration-200">Sign up</Link>
@@ -52,16 +52,14 @@ const Navbar = () => {
             )}
 
             {/* Desktop Menu */}
-            <div className='lg:flex gap-6'>
             <ul className="hidden lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
-                <li className="ml-auto"><Link to="/aboutus" className="font-semibold text-lg text-blue-950 hover:text-blue-600" >About Us</Link></li>
-                <li className="ml-auto"><Link to="/yourcompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Sign Your Company</Link></li>
-                <li className="ml-auto"><Link to="/login"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Log In</Link></li>
-                <li className="ml-auto"><Link to="signup" className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-sky-950 hover:bg-blue-600 text-sm text-white font-semibold  rounded-md transition duration-200" >Sign up</Link></li>
+                <li><Link to="/" className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Jobs</Link></li>
+                <li><Link to="/" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Community</Link></li>
+                <li><Link to="/"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Blog</Link></li>
+                <li><Link to="/"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Profile</Link></li>
             </ul>
-            </div>
         </nav>
     );
 };
 
-export default Navbar;
+export default Main;

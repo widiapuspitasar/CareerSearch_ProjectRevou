@@ -2,8 +2,7 @@ import React from "react";
 import Navbar from "../component/navbar";
 
 
-
-const Homepage = () => {
+const Yourcompanypage = () => {
   return (
     <div className="min-h-[100vh]">
       <Navbar />
@@ -25,11 +24,11 @@ const Homepage = () => {
         {/* Left Section */}
         <div className="w-full relative flex justify-between items-center">
           <div className="w-1/2 py-12 px-20">
-            <h1 className="text-4xl  font-bold tracking-wider leading-relaxed">Temukan Pekerjaan Impian Anda</h1>
-            <p className="text-2xl mt-48 font-poppins tracking-wider leading-relaxed font-light">Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan.</p>
+            <h1 className="text-6xl font-bold tracking-wider leading-relaxed">Your company page</h1>
+            <p className="text-4xl mt-48 font-poppins tracking-wider leading-relaxed font-light">Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan.</p>
           </div>
           <div className="absolute right-0 bottom-0">
-            <img src="assets/man_working_table.png" alt="Man working table" className="w-[35rem] h-[25rem]" />
+            <img src="assets/man_working_table.png" alt="Man working table" className="w-[45rem]" />
           </div>
         </div>
         {/* Right Section (Place your image here) */}
@@ -39,4 +38,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Yourcompanypage;
