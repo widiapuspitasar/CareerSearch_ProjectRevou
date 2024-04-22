@@ -1,39 +1,20 @@
 import React from "react";
 import Navbar from "../component/navbar";
 
-
-
 const Homepage = () => {
   return (
-    <div className="min-h-[100vh]">
+    <div className="min-h-screen">
       <Navbar />
-      {/* <nav className="bg-white py-4 px-6 flex justify-between items-center">
-        <div>
-          <img src="assets/logo.png" alt="logo" className="w-32"/>
-        </div>
-        
-        <div className="flex space-x-20 items-center"> 
-          <a href="#" className="text-blue-950 hover:text-gray-700">About Us</a>
-          <a href="#" className="text-blue-950 hover:text-gray-700">Sign Your Company</a>
-          <a href="#" className="text-blue-950 hover:text-gray-700">Log In</a>
-          <button className="bg-sky-950 text-white font-semibold py-2 px-4 rounded-md">Sign Up</button>
-        </div>
-      </nav> */}
-
-      {/* Main Section */}
-      <section className="bg-blue-950 text-white min-h-[90vh] column-12">
-        {/* Left Section */}
-        <div className="w-full relative flex justify-between items-center">
-          <div className="w-1/2 py-12 px-20">
-            <h1 className="text-4xl  font-bold tracking-wider leading-relaxed">Temukan Pekerjaan Impian Anda</h1>
-            <p className="text-2xl mt-48 font-poppins tracking-wider leading-relaxed font-light">Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan.</p>
-          </div>
-          <div className="absolute right-0 bottom-0">
-            <img src="assets/man_working_table.png" alt="Man working table" className="w-[35rem] h-[25rem]" />
+      <section className="bg-[#0F2C59] text-white min-h-[90vh] column-12 flex flex-col lg:flex-row">
+        <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start items-center">
+          <div className="py-12 px-6 lg:px-20">
+            <h1 className="text-4xl lg:text-5xl font-bold tracking-wider leading-relaxed text-center lg:text-left">Temukan Pekerjaan Impian Anda</h1>
+            <p className="text-2xl lg:text-3xl mt-8 lg:mt-16 font-poppins tracking-wider leading-relaxed text-center lg:text-left">Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan.</p>
           </div>
         </div>
-        {/* Right Section (Place your image here) */}
-        
+        <div className="w-full lg:w-1/2 relative flex justify-center items-center">
+          <img src="assets/man_working_table.png" alt="Man working table" className="w-full max-w-lg lg:w-[35rem] h-auto" />
+        </div>
       </section>
     </div>
   );
