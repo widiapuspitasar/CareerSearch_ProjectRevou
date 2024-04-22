@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import Main from "../../component/main";
-import Searchbar from "../../component/searchbar";
-import Hearticon from "../../component/Icon/heart"
+import Main from "../../../component/main";
+import Searchbar from "../../../component/searchbar";
 import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite'; // Icon filled heart
+import FavoriteIcon from '@mui/icons-material/Favorite'; 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'; 
 
 
@@ -22,7 +21,7 @@ function Mainpage() {
           <Searchbar />
         </section>
         <div className="text-right mb-4 mr-6 mt-2">
-          <p>Favorites</p>
+          <p><Link to="/favoritepage" className="text-blue-950">Favorites</Link></p>
         </div>
         <section className='container mx-auto p-8 bg-[#0F2C59]'>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -31,7 +30,7 @@ function Mainpage() {
                 <img src="assets/Revou.png" className="w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
-                <p className="text-lg font-semibold">Full Stack Developer</p>
+                <p className="text-lg font-poppins">Full Stack Developer</p>
                 <p className="text-gray-600">Revou</p>
                 <p className="text-gray-600 mb-4 md:mb-0">Jakarta</p>
               </div>
@@ -47,7 +46,7 @@ function Mainpage() {
                 <img src="assets/Revou.png" className="w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
-                <p className="text-lg font-semibold">Full Stack Developer</p>
+                <p className="text-lg font-poppins">Full Stack Developer</p>
                 <p className="text-gray-600">Revou</p>
                 <p className="text-gray-600 mb-4 md:mb-0">Jakarta</p>
               </div>
@@ -63,7 +62,7 @@ function Mainpage() {
                 <img src="assets/Revou.png" className="w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
-                <p className="text-lg font-semibold">Full Stack Developer</p>
+                <p className="text-lg font-poppins">Full Stack Developer</p>
                 <p className="text-gray-600">Revou</p>
                 <p className="text-gray-600 mb-4 md:mb-0">Jakarta</p>
               </div>
@@ -79,7 +78,7 @@ function Mainpage() {
                 <img src="assets/Revou.png" className="w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
-                <p className="text-lg font-semibold">Full Stack Developer</p>
+                <p className="text-lg font-poppins">Full Stack Developer</p>
                 <p className="text-gray-600">Revou</p>
                 <p className="text-gray-600 mb-4 md:mb-0">Jakarta</p>
               </div>
@@ -95,7 +94,7 @@ function Mainpage() {
                 <img src="assets/Revou.png" className="w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
-                <p className="text-lg font-semibold">Full Stack Developer</p>
+                <p className="text-lg font-poppins">Full Stack Developer</p>
                 <p className="text-gray-600">Revou</p>
                 <p className="text-gray-600 mb-4 md:mb-0">Jakarta</p>
               </div>
@@ -111,7 +110,7 @@ function Mainpage() {
                 <img src="assets/Revou.png" className="w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
-                <p className="text-lg font-semibold">Full Stack Developer</p>
+                <p className="text-lg font-poppins">Full Stack Developer</p>
                 <p className="text-gray-600">Revou</p>
                 <p className="text-gray-600 mb-4 md:mb-0">Jakarta</p>
               </div>

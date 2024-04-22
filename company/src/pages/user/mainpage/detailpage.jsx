@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from "../../component/main";
-import Searchbar from "../../component/searchbar";
+import Main from "../../../component/main";
+import Searchbar from "../../../component/searchbar";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-const Mainpage = () => {
+const Detailpage = () => {
     return (
       <div>
         <section>
@@ -18,7 +18,7 @@ const Mainpage = () => {
                 <img src="assets/Revou.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
-                <p className="text-lg font-semibold">Full Stack Developer</p>
+                <p className="text-lg font-poppins">Full Stack Developer</p>
                 <p className="text-gray-600">Revou</p>
                 <p className="text-gray-600 mb-4 md:mb-0">Jakarta</p>
                 <p className="text-sm text-gray-600 mb-4 md:mb-0">Posted since 20 August 2024</p>
@@ -26,11 +26,11 @@ const Mainpage = () => {
             </div>
             <div className='p-5 mt-10'>
               <div className="flex flex-col mb-5">
-                <p className='text-lg font-semibold mb-5'>Job Description</p>
+                <p className='text-lg font-poppins mb-5'>Job Description</p>
                 <p className='text-gray-600'>Bertanggung jawab atas desain, pengembangan, modifikasi, debugging dan/atau pemeliharaan sistem perangkat lunak. Bekerja pada modul, aplikasi, atau teknologi tertentu, dan menangani tugas-tugas canggih selama proses pengembangan perangkat lunak.</p>
               </div>
               <div className="flex flex-col mb-5">
-                <p className='text-lg font-semibold mb-5'>Qualification</p>
+                <p className='text-lg font-poppins mb-5'>Qualification</p>
                 <ul className='text-gray-600'>
                     <li>Gelar sarjana atau lebih tinggi di bidang Ilmu Komputer.</li>
                     <li>Pengalaman dalam pengembangan perangkat lunak dengan bahasa pemrograman seperti Java, Python, C++, atau bahasa pemrograman lainnya.</li>
@@ -38,7 +38,7 @@ const Mainpage = () => {
                 </ul>
               </div>
               <div className="flex flex-col mb-5">
-                <p className='text-lg font-semibold mb-5'>Benefit</p>
+                <p className='text-lg font-semipoppinsbold mb-5'>Benefit</p>
                 <ul className='text-gray-600'>
                     <li>Gaji yang kompetitif dan paket tunjangan yang menarik.</li>
                     <li>Lingkungan kerja yang kolaboratif dan mendukung.</li>
@@ -48,7 +48,7 @@ const Mainpage = () => {
                 </ul>
               </div>
               <div className="flex flex-col mb-5">
-                <p className='text-lg font-semibold mb-5'>Jobs Summary</p>
+                <p className='text-lg font-poppins mb-5'>Jobs Summary</p>
                 <div className='grid grid-cols-2 gap-5 '>
                 <div>
                   <p className=''>Jobs Level</p>  
@@ -88,7 +88,7 @@ const Mainpage = () => {
                 </div>
               </div>
               <div className="flex flex-col mb-5">
-                <button type="submit" className="bg-blue-950 text-white font-semibold px-4 py-2 rounded self-end">Apply Now</button>
+                <button type="submit" className="bg-blue-950 text-white font-poppins px-4 py-2 rounded self-end">Apply Now</button>
               </div>
             </div>
           </div>
@@ -97,4 +97,4 @@ const Mainpage = () => {
       );
     };
 
-export default Mainpage;
+export default Detailpage;
