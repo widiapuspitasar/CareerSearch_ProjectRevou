@@ -12,6 +12,9 @@ import Editprofile from './pages/user/mainpage/editprofilepage';
 import Favorite from './pages/user/mainpage/favoritepage';
 import Appliedjobs from './pages/user/mainpage/appliedjobspage';
 import Jobsdetail from './pages/user/mainpage/jobsdetailpage';
+import Signyourcompany from './pages/company/signyourcompany';
+import Logincompany from './pages/company/logincompany';
+import Signupcompany from './pages/company/signupcompany';
 import '../src/App.css'
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
       <Route path="/favoritepage" element={<Favorite />} />
       <Route path="/appliedjobspage" element={<Appliedjobs />} />
       <Route path="/jobsdetailpage" element={<Jobsdetail />} />
+      <Route path="/signyourcompany" element={<Signyourcompany />} />
+      <Route path="/logincompany" element={<Logincompany />} />
+      <Route path="/signupcompany" element={<Signupcompany />} />
     </Routes>
   </Router>
   );

@@ -40,7 +40,7 @@ const Navbar = () => {
                                 <Link to="/aboutus" className="block px-4 py-2">About Us</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/yourcompany" className="block px-4 py-2">Sign Your Company</Link>
+                                <Link to="/signyourcompany" className="block px-4 py-2">Sign Your Company</Link>
                             </li>
                             <li className="py-2">
                                 <Link to="/login"  className="block px-4 py-2">Log In</Link>
