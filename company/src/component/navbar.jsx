@@ -55,7 +55,7 @@ const Navbar = () => {
             <div className='lg:flex gap-6'>
             <ul className="hidden lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
                 <li className="ml-auto"><Link to="/aboutus" className="font-semibold text-lg text-blue-950 hover:text-blue-600" >About Us</Link></li>
-                <li className="ml-auto"><Link to="/yourcompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Sign Your Company</Link></li>
+                <li className="ml-auto"><Link to="/signyourcompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Sign Your Company</Link></li>
                 <li className="ml-auto"><Link to="/login"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Log In</Link></li>
                 <li className="ml-auto"><Link to="signup" className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-sky-950 hover:bg-blue-600 text-sm text-white font-semibold  rounded-md transition duration-200" >Sign up</Link></li>
             </ul>
