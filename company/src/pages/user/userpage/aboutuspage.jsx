@@ -20,7 +20,7 @@ const Aboutus = () => {
         </section>
 
     <div className='bg-[#0F2C59]'>
-        <section className="container mx-auto py-8 px-6 lg:px-20 bg-[#0D2750]">
+        <section className="container mx-auto py-8 px-6 lg:px-20 ">
           <h1 className="text-4xl font-semibold text-white text-center mb-8">Our Members</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             <div className="flex flex-col items-center">
@@ -54,7 +54,7 @@ const Aboutus = () => {
                     <p className="font-bold text-lg">Jobseeker</p>
                 </div>
                 </div>
-                <div className="w-full sm:w-2/3 bg-gray-100 p-3">
+                <div className="bg-[#F9F7F7] w-full sm:w-2/3 bg-gray-100 flex flex-col items-center justify-center p-3">
                 <p className="text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper.
                 </p>
@@ -92,7 +92,7 @@ const Aboutus = () => {
             <div className="flex items-center">
               <div className="flex flex-col">
                 <p className="font-semibold mb-2">Follow us</p>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center ">
                   <img src="assets/socmed1.png" className="w-auto h-8" alt="ig" />
                   <img src="assets/socmed2.png" className="w-auto h-8" alt="linkedin" />
                   <img src="assets/socmed3.png" className="w-auto h-8" alt="yt" />

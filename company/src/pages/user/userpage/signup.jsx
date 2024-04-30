@@ -29,12 +29,12 @@ const Signup = () => {
   return (
     <div>
       <section className="min-h-screen flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 p-8 bg-[#0F2C59] flex flex-col justify-center items-center">
+        <div className="w-full lg:w-1/2 p-8 bg-[#0F2C59] flex flex-col justify-center items-center hidden md:flex">
           <h1 className="text-2xl font-poppins mb-4 text-white text-center">CareerSearch hadir sebagai mitra setia anda dalam menemukan kesempatan karier yang tepat</h1>
           <img src="assets/email.png" alt="CareerSearch Logo" className="mb-8" />
         </div>
         <div className="w-full lg:w-1/2 p-8 flex flex-col justify-center items-center">
-          <h2 className="text-2xl font-poppins mb-4"><img src="assets/logo.png" className="w-full h-auto" alt="Logo"/></h2>
+          <h2 className="text-2xl font-poppins mb-4"><img src="assets/logo.png" className="w-full h-auto mb-8" alt="Logo"/></h2>
           <form onSubmit={formik.handleSubmit} className="mb-8 flex flex-col items-center w-full max-w-md">
             <div className="rounded-md p-3 w-full">
               <label htmlFor="Name" className="block text-sm font-poppins mb-2 sr-only">Name</label>

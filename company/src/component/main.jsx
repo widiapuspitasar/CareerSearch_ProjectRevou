@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Main = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleExpand = () => {
+        setIsExpanded(!isExpanded);
+    };
+
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -14,11 +21,14 @@ const Main = () => {
     };
 
     return (
-        <nav className="relative px-20 py-4 flex justify-between items-center bg-white">
+        <nav className="relative lg:px-5 pt-4 flex justify-between items-center bg-white container mx-auto">
             
-            <div>
+            {/* Logo */}
+            <div className="flex items-center">
                 <Link to="/"><img src="assets/logo.png" alt="logo" className="w-32"/></Link>
             </div>
+            
+            {/* Mobile Menu Button */}
             <div className="lg:hidden">
                 <button className="navbar-burger flex items-center text-blue-600 p-3" onClick={toggleMenu}>
                     <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -28,6 +38,7 @@ const Main = () => {
                 </button>
             </div>
 
+            {/* Mobile Menu */}
             {isOpen && (
                 <div className="fixed top-0 right-0 w-1/2 h-full bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
                     <div className=" rounded-lg p-4">
@@ -41,15 +52,39 @@ const Main = () => {
                                 <Link to="/mainpage" className="block px-4 py-2">Jobs</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/" className="block px-4 py-2">Community</Link>
+                                <Link to="/communitypage" className="block px-4 py-2">Community</Link>
                             </li>
                             <li className="py-2">
                                 <Link to="/"  className="block px-4 py-2">Blog</Link>
                             </li>
-                            <li className="py-2">
+                            <li className="py-2 flex">
                                 <Link to="/Profile"  className="block px-4 py-2">Profile</Link>
+                                <button className="font-semibold text-lg  text-white" onClick={toggleExpand}><ExpandMoreIcon /></button>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            )}
+
+            {isExpanded && (
+                <div className="fixed top-0 right-0 mt-16 mr-4 bg-white rounded-lg shadow-lg p-4 z-50">
+                    <div className="flex items-center">
+                        <div className="mr-3">
+                            <p className="font-semibold">Lee Dohyun</p>
+                            <p className="text-sm">Software Engineering</p>
+                        </div>
+                        <div>
+                            <img src="assets/profile.png" className="w-[4rem] h-[4rem] md:w-[4rem] md:h-[4rem] object-cover" alt="Profile" />
+                        </div>
+                    </div>
+                    <div className="flex mt-4">
+                        <div className='flex flex-col'>
+                            <button className="">View Profile</button>
+                            <button className="">Applied Jobs</button>
+                        </div>
+                    </div>
+                    <div className="mt-4 text-right">
+                        <button className="font-semibold text-lg text-blue-950 hover:text-blue-600"><Link to="/">Logout</Link></button>
                     </div>
                 </div>
             )}
@@ -57,14 +92,15 @@ const Main = () => {
             {/* Desktop Menu */}
             <ul className="hidden lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
                 <li><Link to="/mainpage" className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Jobs</Link></li>
-                <li><Link to="/" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Community</Link></li>
+                <li><Link to="/communitypage" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Community</Link></li>
                 <li><Link to="/"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Blog</Link></li>
             </ul>
-            <div> 
-            <ul className="hidden lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
-                <li><Link to="/Profilepage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600"><svg className="h-6 w-6 text-black" data-testid="MailOutlineIcon"><AccountCircleOutlinedIcon /></svg></Link> </li>
+            <div className="hidden lg:flex lg:items-center">
+                <ul className="flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
+                    <li><Link to="/Profilepage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600"><AccountCircleOutlinedIcon /></Link> </li>
+                    <li><button className="font-semibold text-lg text-blue-950 hover:text-blue-600" onClick={toggleExpand}><ExpandMoreIcon /></button></li>
                 </ul>
-                </div>
+            </div>
         </nav>
     );
 };

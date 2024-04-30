@@ -8,6 +8,7 @@ import Login from './pages/user/userpage/login';
 import Mainpage from './pages/user/mainpage/mainpage';
 import Detailpage from './pages/user/mainpage/detailpage';
 import Profile from './pages/user/mainpage/profilepage';
+import Community from './pages/user/mainpage/communitypage';
 import Editprofile from './pages/user/mainpage/editprofilepage';
 import Favorite from './pages/user/mainpage/favoritepage';
 import Appliedjobs from './pages/user/mainpage/appliedjobspage';
@@ -30,6 +31,7 @@ function App() {
       <Route path="/detailpage" element={<Detailpage />} />
       <Route path="/profilepage" element={<Profile />} />
       <Route path="/editprofilepage" element={<Editprofile />} />
+      <Route path="/communitypage" element={<Community />} />
       <Route path="/favoritepage" element={<Favorite />} />
       <Route path="/appliedjobspage" element={<Appliedjobs />} />
       <Route path="/jobsdetailpage" element={<Jobsdetail />} />
