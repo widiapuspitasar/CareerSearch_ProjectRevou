@@ -14,6 +14,7 @@ import Jobsdetail from './pages/user/mainpage/jobsdetailpage';
 import Signyourcompany from './pages/company/signyourcompany';
 import Logincompany from './pages/company/logincompany';
 import Signupcompany from './pages/company/signupcompany';
+import Mainpagecompany from './pages/company/mainpagecompany';
 import '../src/App.css'
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/signyourcompany" element={<Signyourcompany />} />
       <Route path="/logincompany" element={<Logincompany />} />
       <Route path="/signupcompany" element={<Signupcompany />} />
+      <Route path="/mainpagecompany" element={<Mainpagecompany />} />
     </Routes>
   </Router>
   );

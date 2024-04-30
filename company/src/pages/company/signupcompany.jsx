@@ -24,7 +24,7 @@ const Signupcompany = () => {
     }),
     onSubmit: (values) => {
       console.log('Form submitted with values:', values);
-      navigate('/mainpage');
+      navigate('/mainpagecompany');
     }
   });
 
