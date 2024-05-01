@@ -15,6 +15,7 @@ import Signyourcompany from './pages/company/signyourcompany';
 import Logincompany from './pages/company/logincompany';
 import Signupcompany from './pages/company/signupcompany';
 import Mainpagecompany from './pages/company/mainpagecompany';
+import Postjob from './pages/company/postjob';
 import '../src/App.css'
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Route path="/logincompany" element={<Logincompany />} />
       <Route path="/signupcompany" element={<Signupcompany />} />
       <Route path="/mainpagecompany" element={<Mainpagecompany />} />
+      <Route path="/postjob" element={<Postjob />} />
     </Routes>
   </Router>
   );

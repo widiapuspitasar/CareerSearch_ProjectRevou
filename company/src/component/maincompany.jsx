@@ -14,7 +14,7 @@ const Maincompany = () => {
     };
 
     return (
-        <nav className="relative px-20 py-4 flex justify-between items-center bg-white">
+        <nav className="relative px-20 py-4 flex justify-between items-center bg-[#f9f7f7]">
             
             <div>
                 <Link to="/"><img src="assets/logo.png" alt="logo" className="w-32"/></Link>
@@ -52,15 +52,15 @@ const Maincompany = () => {
             )}
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end lg:ml-auto"> {/* Adjusted classes */}
+            <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end lg:ml-auto">
                 <li className="py-2">
                     <Link to="/mainpage" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Home</Link>
                 </li>
                 <li className="py-2">
-                    <Link to="/listapplies" className="font-semibold text-lg text-blue-950 hover:text-blue-600 mr-4">List Applies</Link> {/* Added mr-4 for right margin */}
+                    <Link to="/listapplies" className="font-semibold text-lg text-blue-950 hover:text-blue-600 mr-4">List Applies</Link>
                 </li>
-                <li className="py-2 flex items-center"> {/* Added flex items-center */}
-                    <Link to="/profilepage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600 ml-4"> {/* Added ml-4 for left margin */}
+                <li className="py-2 flex items-center"> 
+                    <Link to="/profilepage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600 ml-4"> 
                         <svg className="h-6 w-6 text-black" data-testid="MailOutlineIcon"><AccountCircleOutlinedIcon /></svg>
                     </Link>
                 </li>
