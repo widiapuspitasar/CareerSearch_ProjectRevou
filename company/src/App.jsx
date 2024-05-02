@@ -9,6 +9,7 @@ import Detailpage from './pages/user/mainpage/detailpage';
 import Profile from './pages/user/mainpage/profilepage';
 import Community from './pages/user/mainpage/community/communitypage';
 import Blog from './pages/user/mainpage/blog/blogpage';
+import Detailblog from './pages/user/mainpage/blog/detailblogpage';
 import Editprofile from './pages/user/mainpage/editprofilepage';
 import Favorite from './pages/user/mainpage/favoritepage';
 import Appliedjobs from './pages/user/mainpage/appliedjobspage';
@@ -34,6 +35,7 @@ function App() {
       <Route path="/editprofilepage" element={<Editprofile />} />
       <Route path="/communitypage" element={<Community />} />
       <Route path="/blogpage" element={<Blog />} />
+      <Route path="/detailblogpage" element={<Detailblog />} />
       <Route path="/favoritepage" element={<Favorite />} />
       <Route path="/appliedjobspage" element={<Appliedjobs />} />
       <Route path="/jobsdetailpage" element={<Jobsdetail />} />
