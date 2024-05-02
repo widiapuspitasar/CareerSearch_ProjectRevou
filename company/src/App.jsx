@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/homepage';
-import Yourcompanypage from './pages/user/userpage/yourcompanypage';
 import Aboutus from './pages/user/userpage/aboutuspage';
 import Signup from './pages/user/userpage/signup';
 import Login from './pages/user/userpage/login';
@@ -17,6 +16,8 @@ import Jobsdetail from './pages/user/mainpage/jobsdetailpage';
 import Signyourcompany from './pages/company/signyourcompany';
 import Logincompany from './pages/company/logincompany';
 import Signupcompany from './pages/company/signupcompany';
+import Mainpagecompany from './pages/company/mainpagecompany';
+import Postjob from './pages/company/postjob';
 import '../src/App.css'
 
 function App() {
@@ -24,7 +25,6 @@ function App() {
     <Router>
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/yourcompany" element={<Yourcompanypage />} />
       <Route path="/aboutus" element={<Aboutus />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
@@ -40,6 +40,8 @@ function App() {
       <Route path="/signyourcompany" element={<Signyourcompany />} />
       <Route path="/logincompany" element={<Logincompany />} />
       <Route path="/signupcompany" element={<Signupcompany />} />
+      <Route path="/mainpagecompany" element={<Mainpagecompany />} />
+      <Route path="/postjob" element={<Postjob />} />
     </Routes>
   </Router>
   );
