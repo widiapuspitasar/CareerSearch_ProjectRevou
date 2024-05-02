@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
-import Main from "../../../component/main";
+import Main from "../../../../component/main";
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'; 
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
@@ -28,18 +28,6 @@ function CommunityPage() {
       <div>
         <section>
           <Main />
-          <div className='container mx-auto mt-6'>
-            <form onSubmit={handleSubmit} className="flex items-center justify-center mx-5">
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    value={searchQuery}
-                    onChange={handleChange}
-                    className="border border-gray-300 rounded-md px-3 py-2 mr-2 focus:outline-none focus:border-blue-500 w-full"
-                />
-                <svg className="h-8 w-8 text-black" data-testid="MailOutlineIcon"><SearchOutlinedIcon /></svg>
-            </form>
-        </div>
         </section>
         <section className='container mx-auto mt-6'>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">

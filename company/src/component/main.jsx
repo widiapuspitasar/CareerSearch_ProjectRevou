@@ -55,10 +55,10 @@ const Main = () => {
                                 <Link to="/communitypage" className="block px-4 py-2">Community</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/"  className="block px-4 py-2">Blog</Link>
+                                <Link to="/blogpage"  className="block px-4 py-2">Blog</Link>
                             </li>
                             <li className="py-2 flex">
-                                <Link to="/Profile"  className="block px-4 py-2">Profile</Link>
+                                <Link to="/profilepage"  className="block px-4 py-2">Profile</Link>
                                 <button className="font-semibold text-lg  text-white" onClick={toggleExpand}><ExpandMoreIcon /></button>
                             </li>
                         </ul>
@@ -78,9 +78,9 @@ const Main = () => {
                         </div>
                     </div>
                     <div className="flex mt-4">
-                        <div className='flex flex-col'>
-                            <button className="">View Profile</button>
-                            <button className="">Applied Jobs</button>
+                        <div className='flex flex-col items-start'>
+                        <Link to="/profilepage"> <button className="">View Profile</button></Link>
+                        <Link to="/appliedjobspage"> <button className="">Applied Jobs</button></Link>
                         </div>
                     </div>
                     <div className="mt-4 text-right">
@@ -93,7 +93,7 @@ const Main = () => {
             <ul className="hidden lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
                 <li><Link to="/mainpage" className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Jobs</Link></li>
                 <li><Link to="/communitypage" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Community</Link></li>
-                <li><Link to="/"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Blog</Link></li>
+                <li><Link to="/blogpage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Blog</Link></li>
             </ul>
             <div className="hidden lg:flex lg:items-center">
                 <ul className="flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
