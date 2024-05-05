@@ -20,6 +20,7 @@ import Signupcompany from './pages/company/signupcompany';
 import Mainpagecompany from './pages/company/mainpagecompany';
 import Postjob from './pages/company/postjob';
 import Jobdetailcompany from './pages/company/jobdetailcompany';
+import Profilecompany from './pages/company/profilecompany';
 import '../src/App.css'
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Route path="/mainpagecompany" element={<Mainpagecompany />} />
       <Route path="/postjob" element={<Postjob />} />
       <Route path="/jobdetailcompany" element={<Jobdetailcompany />} />
+      <Route path="/profilecompany" element={<Profilecompany />} />
     </Routes>
   </Router>
   );
