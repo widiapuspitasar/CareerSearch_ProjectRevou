@@ -2,6 +2,7 @@ import React from "react";
 import Maincompany from "../../component/maincompany";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Link } from 'react-router-dom'; 
 
 const Profilecompany = () => {
     return (
@@ -11,7 +12,9 @@ const Profilecompany = () => {
         </section>
         <section className='container mx-auto p-8'>
           <div className="rounded overflow-hidden shadow-lg bg-gray-100 relative">
-            <button className="absolute top-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins">Edit Profile</button>
+            <Link to="/editprofilecompany">
+              <button className="absolute top-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins">Edit Profile</button>
+            </Link>
             <div className='flex flex-col justify-center items-center py-8'>
               <div className="flex flex-col items-center mb-5">
                 <img src="assets/Revou.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover mb-3" alt="Profile" />

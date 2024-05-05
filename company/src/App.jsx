@@ -23,6 +23,8 @@ import Profile2 from './pages/company/profile';
 import Emptystate from './pages/company/emptystate';
 import Jobdetailcompany from './pages/company/jobdetailcompany';
 import Profilecompany from './pages/company/profilecompany';
+import Editprofilecompany from './pages/company/editprofilecompany';
+import Listappliers from './pages/company/listappliers';
 import '../src/App.css'
 
 function App() {
@@ -52,6 +54,8 @@ function App() {
       <Route path="/postjob" element={<Postjob />} />
       <Route path="/jobdetailcompany" element={<Jobdetailcompany />} />
       <Route path="/profilecompany" element={<Profilecompany />} />
+      <Route path="/editprofilecompany" element={<Editprofilecompany />} />
+      <Route path="/listappliers" element={<Listappliers />} />
     </Routes>
   </Router>
   );

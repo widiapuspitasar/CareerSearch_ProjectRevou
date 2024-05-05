@@ -41,10 +41,10 @@ const Maincompany = () => {
                                 <Link to="/mainpage" className="block px-4 py-2">Home</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/listapplies" className="block px-4 py-2">List Applies</Link>
+                                <Link to="/listappliers" className="block px-4 py-2">List Applies</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/profile" className="block px-4 py-2">Profile</Link>
+                                <Link to="/profilecompany" className="block px-4 py-2">Profile</Link>
                             </li>
                         </ul>
                     </div>
@@ -57,10 +57,10 @@ const Maincompany = () => {
                     <Link to="/mainpagecompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Home</Link>
                 </li>
                 <li className="py-2">
-                    <Link to="/listapplies" className="font-semibold text-lg text-blue-950 hover:text-blue-600 mr-4">List Applies</Link>
+                    <Link to="/listappliers" className="font-semibold text-lg text-blue-950 hover:text-blue-600 mr-4">List Applies</Link>
                 </li>
                 <li className="py-2 flex items-center"> 
-                    <Link to="/profile"  className="font-semibold text-lg text-blue-950 hover:text-blue-600 ml-4"> 
+                    <Link to="/profilecompany"  className="font-semibold text-lg text-blue-950 hover:text-blue-600 ml-4"> 
                         <svg className="h-6 w-6 text-black" data-testid="MailOutlineIcon"><AccountCircleOutlinedIcon /></svg>
                     </Link>
                 </li>
