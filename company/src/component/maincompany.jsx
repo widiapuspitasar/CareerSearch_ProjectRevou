@@ -54,13 +54,13 @@ const Maincompany = () => {
             {/* Desktop Menu */}
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end lg:ml-auto">
                 <li className="py-2">
-                    <Link to="/mainpage" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Home</Link>
+                    <Link to="/mainpagecompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Home</Link>
                 </li>
                 <li className="py-2">
                     <Link to="/listapplies" className="font-semibold text-lg text-blue-950 hover:text-blue-600 mr-4">List Applies</Link>
                 </li>
                 <li className="py-2 flex items-center"> 
-                    <Link to="/profilepage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600 ml-4"> 
+                    <Link to="/profile"  className="font-semibold text-lg text-blue-950 hover:text-blue-600 ml-4"> 
                         <svg className="h-6 w-6 text-black" data-testid="MailOutlineIcon"><AccountCircleOutlinedIcon /></svg>
                     </Link>
                 </li>

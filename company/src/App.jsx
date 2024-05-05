@@ -19,6 +19,7 @@ import Logincompany from './pages/company/logincompany';
 import Signupcompany from './pages/company/signupcompany';
 import Mainpagecompany from './pages/company/mainpagecompany';
 import Postjob from './pages/company/postjob';
+import Profile2 from './pages/company/profile';
 import Jobdetailcompany from './pages/company/jobdetailcompany';
 import Profilecompany from './pages/company/profilecompany';
 import '../src/App.css'
@@ -45,6 +46,7 @@ function App() {
       <Route path="/logincompany" element={<Logincompany />} />
       <Route path="/signupcompany" element={<Signupcompany />} />
       <Route path="/mainpagecompany" element={<Mainpagecompany />} />
+      <Route path="/profile" element={<Profile2 />} />
       <Route path="/postjob" element={<Postjob />} />
       <Route path="/jobdetailcompany" element={<Jobdetailcompany />} />
       <Route path="/profilecompany" element={<Profilecompany />} />
