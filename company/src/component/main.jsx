@@ -21,7 +21,7 @@ const Main = () => {
     };
 
     return (
-        <nav className="relative lg:px-5 pt-4 flex justify-between items-center bg-white container mx-auto">
+        <nav className="relative px-5 lg:px-5 pt-4 flex justify-between items-center bg-white container mx-auto">
             
             {/* Logo */}
             <div className="flex items-center">
@@ -40,7 +40,7 @@ const Main = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="fixed top-0 right-0 w-1/2 h-full bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+                <div className="fixed top-0 right-0 w-1/2 h-full bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 ">
                     <div className=" rounded-lg p-4">
                         <button className="absolute top-0 right-0 m-4" onClick={closeMenu}>
                             <svg className="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">

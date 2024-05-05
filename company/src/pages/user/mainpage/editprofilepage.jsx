@@ -9,10 +9,10 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 const Mainpage = () => {
     return (
         <div>
-            <section>
+            <header>
                 <Main />
                 <Searchbar />
-            </section>
+            </header>
             <section className='container mt-6 mx-auto p-8 bg-blue-900'>
                 <div className='flex gap-4 mb-3'>
                     <button type="submit" className="bg-[#D9D9D9] font-poppins px-4 py-2 rounded self-end"><Link to="/profilepage">Profile</Link></button>

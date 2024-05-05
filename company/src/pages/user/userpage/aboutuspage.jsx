@@ -3,24 +3,24 @@ import Navbar from "../../../component/navbar";
 import Footer from "../../../component/footer";
 
 const Aboutus = () => {
-    return (
-      <div className="min-h-screen">
-        <Navbar />
-        <section className="bg-[#0F2C59] text-white py-8">
-          <div className="container mx-auto flex flex-col lg:flex-row items-center">
-            <div className="w-full lg:w-1/2 px-6 lg:px-20 mb-8 lg:mb-0">
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-wider leading-relaxed">About Us</h1>
-              <p className="text-xl mt-4 lg:mt-8 font-poppins tracking-wider leading-relaxed font-light">
-                Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan. Bersama-sama, kita membangun dunia di mana orang-orang mendapatkan dukungan dan sumber daya yang mereka perlukan untuk mendapatkan pekerjaan yang mereka sukai.
-              </p>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <img src="assets/sales team.png" alt="" className="w-full h-auto" />
-            </div>
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <header className="bg-[#0F2C59] text-white py-8">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center">
+          <div className="w-full lg:w-1/2 px-6 lg:px-20 mb-8 lg:mb-0">
+            <h1 className="text-4xl lg:text-5xl font-bold tracking-wider leading-relaxed">About Us</h1>
+            <p className="text-xl mt-4 lg:mt-8 font-poppins tracking-wider leading-relaxed font-light">
+              Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan. Bersama-sama, kita membangun dunia di mana orang-orang mendapatkan dukungan dan sumber daya yang mereka perlukan untuk mendapatkan pekerjaan yang mereka sukai.
+            </p>
           </div>
-        </section>
+          <div className="w-full lg:w-1/2">
+            <img src="assets/sales team.png" alt="" className="w-full h-auto" />
+          </div>
+        </div>
+      </header>
 
-    <div className='bg-[#0F2C59]'>
+      <div className='bg-[#0F2C59]'>
         <section className="container mx-auto py-8 px-6 lg:px-20 ">
           <h1 className="text-4xl font-semibold text-white text-center mb-8">Our Members</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -46,27 +46,26 @@ const Aboutus = () => {
         </section>
 
         <section className="container mx-auto py-8 px-6 lg:px-20">
-        <h1 className="text-3xl font-semibold text-center mb-8 text-white">Kata mereka tentang CareerSearch</h1>
-            <div className="rounded overflow-hidden shadow-lg bg-[#F9F7F7] flex flex-col sm:flex-row p-3">
-                <div className="w-full sm:w-1/3 flex flex-col items-center justify-center p-3">
-                <img src="assets/user.png" className="w-64 h-64" alt="Profile" />
-                <div className="text-center mt-2">
-                    <p className="font-bold text-lg">John Doe</p>
-                    <p className="font-bold text-lg">Jobseeker</p>
-                </div>
-                </div>
-                <div className="bg-[#F9F7F7] w-full sm:w-2/3 bg-gray-100 flex flex-col items-center justify-center p-3">
-                <p className="text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper.
-                </p>
-                </div>
+          <h1 className="text-3xl font-semibold text-center mb-8 text-white">Kata mereka tentang CareerSearch</h1>
+          <div className="rounded overflow-hidden shadow-lg bg-[#F9F7F7] flex flex-col sm:flex-row p-3">
+            <div className="w-full sm:w-1/3 flex flex-col items-center justify-center p-3">
+              <img src="assets/user.png" className="w-64 h-64" alt="Profile" />
+              <div className="text-center mt-2">
+                <p className="font-bold text-lg">John Doe</p>
+                <p className="font-bold text-lg">Jobseeker</p>
+              </div>
             </div>
+            <div className="bg-[#F9F7F7] w-full sm:w-2/3 bg-gray-100 flex flex-col items-center justify-center p-3">
+              <p className="text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam et risus sodales ullamcorper.
+              </p>
+            </div>
+          </div>
         </section>
-
-        </div>
-        <Footer/>
       </div>
-    );
+      <Footer/>
+    </div>
+  );
 };
 
 export default Aboutus;

@@ -7,10 +7,10 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 function Favoritepage({ favoriteJobs }) {
     return (
-        <div>
-        <section>
+      <div>
+        <header>
           <Main />
-        </section>
+        </header>
         <section className='container mx-auto p-8 bg-[#0F2C59]'>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {favoriteJobs.map(job => (

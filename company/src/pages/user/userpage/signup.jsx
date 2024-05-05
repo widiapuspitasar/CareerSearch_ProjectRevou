@@ -53,7 +53,7 @@ const Signup = () => {
             </div>
             <button type="submit" className="bg-[#0F2C59] text-white font-poppins px-4 py-2 rounded self-end">Sign up</button>
           </form>
-          <p>Already have an account? <Link to="/login" className="text-blue-950">Log in!</Link></p>
+          <p>Already have an account? <Link to="/login" className="text-[#0F2C59] font-bold">Log in!</Link></p>
         </div>
       </section>
     </div>

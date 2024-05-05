@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Blognav from "../../../../component/blognav";
 import Footer from "../../../../component/footer";
@@ -93,7 +93,7 @@ function BlogPage() {
                     </form>
                 </section>
             </section>
-            <section className="bg-[#0F2C59] text-white py-8 mt-8">
+            <header className="bg-[#0F2C59] text-white py-8 mt-8">
                 <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center relative">
                     <div className="w-full lg:w-1/2 px-6 lg:px-20 mb-8 lg:mb-0 relative">
                         <div className='flex gap-4 items-center pb-3'>
@@ -115,7 +115,7 @@ function BlogPage() {
                     <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-transparent border-none text-white text-xl">&#10094;</button>
                     <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent border-none text-white text-xl">&#10095;</button>
                 </div>
-            </section>
+            </header>
             <div className="flex flex-col lg:flex-row mt-8 mx-8">
                 <section className='container mx-auto w-full lg:w-3/4 lg:pr-4'>
                     <div>
@@ -123,7 +123,7 @@ function BlogPage() {
                         {renderSlides()}
                     </div>
                 </section>
-                <section className='w-full lg:w-1/4 lg:pl-4 border-l-2 border-black px-5'>
+                <aside className='w-full lg:w-1/4 lg:pl-4 border-l-2 border-black px-5'>
                     <div className="bg-[#0F2C59] text-white column-12 flex flex-col lg:flex-row rounded-lg overflow-hidden shadow-md">
                         <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start items-center">
                             <div className="py-6 px-4 lg:px-8">
@@ -154,7 +154,7 @@ function BlogPage() {
                             <img src="assets/socmed3.png" className="w-8 h-8" alt="yt" />
                         </div>
                     </div>
-                </section>
+                </aside>
             </div>
 
             <Footer/>

@@ -7,10 +7,10 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const Detailpage = () => {
     return (
       <div>
-        <section>
+        <header>
           <Main />
           <Searchbar />
-        </section>
+        </header>
         <section className='container mt-6 mx-auto p-8 bg-[#0F2C59]'>
           <div className="rounded overflow-hidden shadow-lg bg-gray-100 p-3 ">
             <div className='flex border-b-2'>

@@ -46,7 +46,7 @@ const Login = () => {
             </div>
             <button type="submit" className="bg-[#0F2C59] text-white font-poppins px-4 py-2 rounded self-end">Login</button>
           </form>
-          <p>Don’t have an account? <Link to="/signup" className="text-blue-950">Sign up!</Link></p>
+          <p>Don’t have an account? <Link to="/signup" className="text-[#0F2C59] font-bold">Sign up!</Link></p>
         </div>
       </section>
     </div>
