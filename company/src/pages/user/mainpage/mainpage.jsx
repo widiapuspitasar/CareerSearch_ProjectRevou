@@ -5,7 +5,6 @@ import Main from "../../../component/main";
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite'; 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'; 
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 
 function Mainpage() {
@@ -77,7 +76,6 @@ function Mainpage() {
       const userId = userData.user_id;
       axios.delete(`https://backendproject-production-41c5.up.railway.app/favorite/${userId}/${jobId}`)
           .then(response => {
-              console.log(response.data.message);
           })
           .catch(error => {
               console.error('Error deleting favorite job:', error);
@@ -100,7 +98,6 @@ function Mainpage() {
         <Main />
       </header>
       <section className=' container mx-auto'>
-        
         <div className="text-right mb-4 mt-2 mr-2 text-xl font-bold ">
           <p><Link to="/favoritepage" className="text-blue-950 hover:text-blue-500">List Favorites</Link></p>
         </div>
@@ -114,7 +111,6 @@ function Mainpage() {
               value={searchTerm}
               onChange={handleSearch}
             />
-            
             <IconButton style={{ color: 'white', fontSize: '10rem' }}>
               <SearchIcon  sx={{ fontSize: 40 }}/>
             </IconButton>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 import axios from 'axios';
 import Maincompany from "../../component/maincompany";
 
@@ -10,7 +10,6 @@ function Listappliers() {
     const companyId = localStorage.getItem('companyData') ? JSON.parse(localStorage.getItem('companyData')).company_id : null;
     axios.get(`https://backendproject-production-41c5.up.railway.app/apply_list/${companyId}`)
       .then(response => {
-        console.log(response)
         setApplicants(response.data.data);
       })
       .catch(error => {

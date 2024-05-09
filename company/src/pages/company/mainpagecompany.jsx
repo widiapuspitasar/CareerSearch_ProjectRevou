@@ -27,8 +27,7 @@ function Mainpagecompany() {
       <header>
         <Maincompany />
       </header>
-      
-      {/* Kondisi: Tidak ada pekerjaan yang ditemukan */}
+
       {isLoading && (
         <div className='justify-center container mx-auto p-8 bg-[#0F2C59] relative flex items-center'>
           <div className="flex flex-col items-center font-poppins">

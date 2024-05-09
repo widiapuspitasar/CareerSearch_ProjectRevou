@@ -13,12 +13,9 @@ const Profileuser = () => {
   const { apply_job_id } = useParams();
 
   useEffect(() => {
-    // const userId = JSON.parse(localStorage.getItem('userData')).user_id;
     axios.get(`https://backendproject-production-41c5.up.railway.app/about_user/${user_id}`)
         .then(response => {
-            console.log(response.data)
             setUserData(response.data.data);
-            // Simpan data ke localStorage
             localStorage.setItem('name', response.data.data.about_user[0].name);
             localStorage.setItem('role', response.data.data.about_user[0].role);
         })
@@ -31,12 +28,14 @@ const handleStatusUpdate = () => {
   axios.put(`https://backendproject-production-41c5.up.railway.app/status_update/${user_id}/${apply_job_id}`, { status: newStatus })
     .then(response => {
         console.log(response.data);
-        // Tambahkan logika tambahan jika diperlukan
+        alert('Status updated successfully!');
     })
     .catch(error => {
         console.error('Error updating status:', error);
+        alert('Failed to update status. Please try again later.');
     });
 };
+
 
   return (
     <div>

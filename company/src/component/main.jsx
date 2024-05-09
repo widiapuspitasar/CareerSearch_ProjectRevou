@@ -23,7 +23,6 @@ const Main = () => {
             setName(name);
             setRole(role);
         }
-        console.log('isExpanded:', isExpanded)
     };
 
     useEffect(() => {
@@ -32,7 +31,6 @@ const Main = () => {
             const userData = JSON.parse(userDataString);
             setUserData(userData);
         }
-
         const companyDataString = localStorage.getItem('companyData');
         if (companyDataString) {
             const companyData = JSON.parse(companyDataString);

@@ -19,24 +19,20 @@ const Login = () => {
             withCredentials: true 
         });
         
-        console.log('Server Response:', response.data); 
-        
         const userData = response.data.data.user;
         localStorage.setItem('userData', JSON.stringify({
           token: response.data.token,
-          user_id: response.data.data.user.id // Simpan user_id dari respons dalam userData
+          user_id: response.data.data.user.id
         }));
         localStorage.setItem('name', userData.name);
         localStorage.setItem('role', userData.role);
         
-        console.log('Login successful:', userData);
+        console.log('Login successful:');
 
-        // Pindahkan useEffect ke sini
         const userId = userData.id;
         axios.get(`https://backendproject-production-41c5.up.railway.app/about_user/${userId}`)
             .then(response => {
                 setUserData(response.data.data);
-                // Simpan data ke localStorage
                 localStorage.setItem('name', response.data.data.about_user[0].name);
                 localStorage.setItem('role', response.data.data.about_user[0].role);
             })
@@ -72,8 +68,8 @@ const Login = () => {
 
   return (
     <div>
-      <section className="min-h-screen flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 p-8 bg-[#0F2C59] flex flex-col justify-center items-center md:flex">
+      <section className="min-h-screen flex flex-col lg:flex-row ">
+        <div className="w-full lg:w-1/2 p-8 bg-[#0F2C59] flex flex-col justify-center items-center hidden md:flex">
           <h1 className="text-2xl font-poppins mb-4 text-white text-center">CareerSearch is here as your faithful partner in finding the right career opportunities.</h1>
           <img src="/assets/signup_user.png" alt="logo" />
         </div>

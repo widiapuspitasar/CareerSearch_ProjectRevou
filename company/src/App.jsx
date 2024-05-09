@@ -14,7 +14,6 @@ import Createprofilepage from './pages/user/mainpage/createprofilepage';
 import EditProfilePage from './pages/user/mainpage/editprofilepage';
 import Favorite from './pages/user/mainpage/favoritepage';
 import Appliedjobs from './pages/user/mainpage/appliedjobspage';
-import Jobsdetail from './pages/user/mainpage/jobsdetailpage';
 import Signyourcompany from './pages/company/signyourcompany';
 import Logincompany from './pages/company/logincompany';
 import Signupcompany from './pages/company/signupcompany';
@@ -22,7 +21,6 @@ import Mainpagecompany from './pages/company/mainpagecompany';
 import Postjob from './pages/company/postjob';
 import Profileuser from './pages/company/profileuser';
 import Emptystate from './pages/company/emptystate';
-import Jobdetailcompany from './pages/company/jobdetailcompany';
 import Profilecompany from './pages/company/profilecompany';
 import Createprofilecompany from './pages/company/createprofilecompany';
 import Editprofilecompany from './pages/company/editprofilecompany';
@@ -41,7 +39,6 @@ function App() {
       <Route path="/mainpage" element={<Mainpage />} />
       <Route path="/detailpage" element={<Detailpage />} />
       <Route path="/detailpage/:post_job_id" element={<Detailpage />} />
-      {/* <Route path="/profilepage/:user_id" element={<Profile />} /> */}
       <Route path="/profilepage" element={<Profile />} />
       <Route path="/createprofilepage" element={<Createprofilepage/>} />
       <Route path="/editprofilepage" element={<EditProfilePage />} />
@@ -50,7 +47,6 @@ function App() {
       <Route path="/detailblogpage" element={<Detailblog />} />
       <Route path="/favoritepage" element={<Favorite />} />
       <Route path="/appliedjobspage" element={<Appliedjobs />} />
-      <Route path="/jobsdetailpage" element={<Jobsdetail />} />
       <Route path="/signyourcompany" element={<Signyourcompany />} />
       <Route path="/logincompany" element={<Logincompany />} />
       <Route path="/signupcompany" element={<Signupcompany />} />
@@ -58,7 +54,6 @@ function App() {
       <Route path="/profileuser/:user_id/:apply_job_id" element={<Profileuser />} />
       <Route path="/emptystate" element={<Emptystate />} />
       <Route path="/postjob" element={<Postjob />} />
-      <Route path="/jobdetailcompany" element={<Jobdetailcompany />} />
       <Route path="/profilecompany" element={<Profilecompany />} />
       <Route path="/editprofilecompany" element={<Editprofilecompany />} />
       <Route path="/createprofilecompany" element={<Createprofilecompany />} />

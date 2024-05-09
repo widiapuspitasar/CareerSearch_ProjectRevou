@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -6,6 +6,7 @@ import axios from 'axios';
 
 const Logincompany = () => {
   const navigate = useNavigate();
+  const [companyData, setCompanyData] = useState(null);
 
   const handleLoginCompany = async (values) => {
     try {
@@ -14,28 +15,39 @@ const Logincompany = () => {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        withCredentials: true // Mengizinkan pengiriman kredensial
+        withCredentials: true 
       });
-
-      console.log('Server Response:', response.data);
 
       const companyData = response.data.data.company;
       localStorage.setItem('companyData', JSON.stringify({
         token: response.data.token,
         company_id: response.data.data.company.id
       }));
-      console.log('Login successful:', companyData);
-      navigate('/mainpagecompany');
+      localStorage.setItem('company_name', companyData.company_name);
+      localStorage.setItem('company_type', companyData.company_type);
+      console.log('Login successful:');
 
+      const companyId = companyData.id;
+      axios.get(`https://backendproject-production-41c5.up.railway.app/about_company/${companyId}`)
+            .then(response => {
+                setCompanyData(response.data.data);
+                localStorage.setItem('company_name', response.data.data.about_company[0].company_name);
+                localStorage.setItem('company_type', response.data.data.about_company[0].company_type);
+            })
+            .catch(error => {
+                console.error('Error fetching user data:', error);
+            });
+
+        navigate('/mainpagecompany');
     } catch (error) {
-      console.error('Login failed:', error.response.data);
-      if (error.response.status === 401) {
-        alert('Email or password is incorrect. Please try again.');
-      } else {
-        alert('An error occurred. Please try again later.');
-      }
+        console.error('Login failed:', error.response.data);
+        if (error.response.status === 401) {
+            alert('Email or password is incorrect. Please try again.');
+        } else {
+            alert('An error occurred. Please try again later.');
+        }
     }
-  };
+};
 
   const formik = useFormik({
     initialValues: {

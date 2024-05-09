@@ -12,14 +12,12 @@ const Profilecompany = () => {
         const companyId = JSON.parse(localStorage.getItem('companyData')).company_id;
         axios.get(`https://backendproject-production-41c5.up.railway.app/about_company/${companyId}`)
             .then(response => {
-               console.log(response.data);
                 setCompanyData(response.data.data);
                 localStorage.setItem('company_type', response.data.data.about_company[0].company_type);
                 localStorage.setItem('company_name', response.data.data.company.company_name);
             })
             .catch(error => {
                 console.error('Error fetching company data:', error);
-                console.log(companyData)
             });
     }, []);
 
@@ -39,14 +37,12 @@ const Profilecompany = () => {
             <section className='rounded container mx-auto mt-5 p-10 bg-[#0F2C59]'>
                 <div className="rounded overflow-hidden shadow-lg gap-4  bg-gray-100 relative md:m-10">
                     {renderCreateProfileCompany()}
-                    
                     <div className='flex flex-col justify-center items-center py-8 ml-10 mr-10 '>
-                        
                         <div className="p-5">
                             {companyData && companyData.about_company && companyData.about_company.map((aboutCompanyData, index)=> (
                                 <div key={index}>
                                     <div className="flex flex-col items-center mb-5">
-                                        <img src="assets/Revou.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover mb-3" alt="Profile" />
+                                        <img src="assets/company_logo.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover mb-3" alt="Profile" />
                                         <p className="text-center text-lg font-poppins mb-5">{aboutCompanyData.company_name}</p>
                                     </div>
                                     <button className="absolute top-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins"><Link to="/editprofilecompany">Edit Profile</Link></button>

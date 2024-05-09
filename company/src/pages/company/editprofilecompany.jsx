@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Editprofilecompany = () => {
-  const [companyData, setCompanyData] = useState({});
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -20,7 +19,6 @@ const Editprofilecompany = () => {
     const companyId = JSON.parse(localStorage.getItem('companyData')).company_id;
     axios.get(`https://backendproject-production-41c5.up.railway.app/about_company/${companyId}`)
       .then(response => {
-        console.log('Response from server:', response.data);
         const companyData = response.data.data;
         const aboutCompany = companyData.about_company && companyData.about_company.length > 0 ? companyData.about_company[0] : {};
 
@@ -45,18 +43,16 @@ const Editprofilecompany = () => {
         [name]: value
     }));
 };
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const companyId = JSON.parse(localStorage.getItem('companyData')).company_id;
     try {
-        const response = await axios.put(`http://127.0.0.1:5000/about_company/edit/${companyId}`, formData, {
+        const response = await axios.put(`https://backendproject-production-41c5.up.railway.app/about_company/edit/${companyId}`, formData, {
             headers: {
                 'Content-Type': 'application/json'
             }
         });
-        console.log('Profile company updated successfully:', response.data);
+        console.log('Profile company updated successfully:');
         navigate('/profilecompany');
     } catch (error) {
         console.error('Error updating profile:', error);
@@ -70,9 +66,6 @@ const Editprofilecompany = () => {
         </section>
         <section className='container mx-auto p-8'>
           <div className="rounded overflow-hidden shadow-lg bg-gray-100 relative">
-            {/* <Link to="/profilecompany">
-              <button  type="submit" className="absolute top-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins">Save Profile</button>
-            </Link> */}
             <form onSubmit={handleSubmit}>
               <div className='p-10'>
                         <div >

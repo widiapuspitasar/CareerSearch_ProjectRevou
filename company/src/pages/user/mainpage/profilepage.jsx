@@ -14,9 +14,7 @@ const Profilepage = () => {
     const userId = JSON.parse(localStorage.getItem('userData')).user_id;
     axios.get(`https://backendproject-production-41c5.up.railway.app/about_user/${userId}`)
         .then(response => {
-            console.log(response.data)
             setUserData(response.data.data);
-            // Simpan data ke localStorage
             localStorage.setItem('name', response.data.data.about_user[0].name);
             localStorage.setItem('role', response.data.data.about_user[0].role);
         })
@@ -84,7 +82,7 @@ const renderProfileButton = () => {
                     </div>
                     <div>
                       <p className='text-lg font-poppins mb-5 mt-5'>Contact Me</p>
-                      <div className="rounded ml-2 overflow-hidden shadow-lg bg-[#EADBC8] flex p-3 w-60 flex-col">
+                      <div className="rounded ml-2 overflow-hidden shadow-lg bg-[#EADBC8] flex p-3 w-[20rem] flex-col">
                         <div className='flex gap-2 '>
                           <svg className="h-6 w-6 text-black" data-testid="MailOutlineIcon"><MailOutlineIcon /></svg>
                           <p>{about.email}</p>
@@ -97,7 +95,7 @@ const renderProfileButton = () => {
                     </div>
                     <div>
                       <p className='text-lg font-poppins mb-5 mt-5'>Resume</p>
-                      <div className="rounded ml-2 overflow-hidden shadow-lg bg-[#EADBC8] flex p-3 w-60  flex-col">
+                      <div className="rounded ml-2 overflow-hidden shadow-lg bg-[#EADBC8] flex p-3 w-[20rem]  flex-col">
                         <div className='flex gap-2 '>
                           <svg className="h-6 w-6 text-black" data-testid="MailOutlineIcon"><DescriptionOutlinedIcon /></svg>
                           <p>{about.file_resume}</p>

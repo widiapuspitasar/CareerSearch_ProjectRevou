@@ -1,8 +1,11 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
       <footer className="py-8">
           <div className="container mx-auto flex flex-col md:flex-row justify-center items-center md:justify-between gap-8">
-              <div className="mb-4 md:mb-0">
+              <div className="mb-4 md:mb-0 ml-5">
                   <img src="assets/logo.png" className="w-32 h-auto" alt="Logo" />
               </div>
               <div className="flex flex-col items-center md:items-start">
@@ -21,12 +24,12 @@ const Footer = () => {
                       <p className="text-gray-600 mb-2">Employer</p>
                   </div>
               </div>
-              <div className="flex flex-col items-center md:items-start">
+              <div className="flex flex-col items-center md:items-start mr-10">
                   <p className="font-semibold mb-2">Follow us</p>
-                  <div className="flex items-center">
-                      <img src="assets/socmed1.png" className="w-auto h-8 mr-2" alt="ig" />
-                      <img src="assets/socmed2.png" className="w-auto h-8 mr-2" alt="linkedin" />
-                      <img src="assets/socmed3.png" className="w-auto h-8 mr-2" alt="yt" />
+                  <div className="flex items-center flex-col">
+                      <Link to='https://www.instagram.com/'><img src="/assets/socmed1.png" className="w-auto h-8 mr-2" alt="ig" /></Link>
+                      <Link to='https://www.linkedin.com/'><img src="/assets/socmed2.png" className="w-auto h-8 mr-2" alt="linkedin" /></Link>
+                      <Link to='https://www.youtube.com/'><img src="assets/socmed3.png" className="w-auto h-8 mr-2" alt="yt" /></Link>
                   </div>
               </div>
           </div>

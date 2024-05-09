@@ -26,7 +26,6 @@ const EditProfilePage = () => {
         const userId = JSON.parse(localStorage.getItem('userData')).user_id;
         axios.get(`https://backendproject-production-41c5.up.railway.app/about_user/${userId}`)
             .then(response => {
-                console.log('Response from server:', response.data); 
                 const userData = response.data.data;
                 const aboutUser = userData.about_user && userData.about_user.length > 0 ? userData.about_user[0] : {}; 
                 const skillsArray = Array.isArray(userData.skills) ? userData.skills : [];
@@ -58,19 +57,16 @@ const EditProfilePage = () => {
         e.preventDefault();
 
         const userId = JSON.parse(localStorage.getItem('userData')).user_id;
-        console.log('Data to be submitted:', formData);
-
         try {
-            const response = await axios.put(`http://127.0.0.1:5000/about_user/edit/${userId}`, formData, {
+            const response = await axios.put(`https://backendproject-production-41c5.up.railway.app/about_user/edit/${userId}`, formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            console.log('Profile updated successfully:', response.data);
+            console.log('Profile updated successfully:');
             navigate('/profilepage');
         } catch (error) {
             console.error('Error updating profile:', error);
-            // Tambahkan logika penanganan error di sini
         }
     };
 
@@ -112,11 +108,8 @@ const EditProfilePage = () => {
                         </div>
                     </div>
                     <div className='p-5 mt-4'>
-                        {/* <div className='text-right mb-4 mr-6'>
-                            <button type="submit" className="bg-[#0F2C59] text-white font-poppins px-4 py-2 rounded self-end"><Link to="/profilepage">Save Profile</Link></button>
-                        </div> */}
                         <form onSubmit={handleSubmit}>
-                        <div>
+                            <div>
                                 <div>
                                     <p className='text-lg font-poppins mb-5 mt-5'>Full Name</p>
                                     <div>

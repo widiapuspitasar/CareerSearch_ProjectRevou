@@ -4,7 +4,6 @@ import Main from "../../../component/main";
 import axios from 'axios';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'; 
 
 function Favoritepage() {
   const [favoriteJobs, setFavoriteJobs] = useState([]);
@@ -32,7 +31,7 @@ function Favoritepage() {
 
 
         const userId = userData.user_id;
-        axios.delete(`https://backendproject-production-41c5.up.railway.app/${userId}/${jobId}`)
+        axios.delete(`https://backendproject-production-41c5.up.railway.app/favorite/${userId}/${jobId}`)
             .then(response => {
                 console.log(response.data.message); 
             })

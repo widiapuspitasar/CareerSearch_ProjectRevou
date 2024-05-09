@@ -27,7 +27,7 @@ const Createprofilecompany = () => {
   
       try {
         const comapnyId = localStorage.getItem('companyData') ? JSON.parse(localStorage.getItem('companyData')).company_id : null;
-        const response = await axios.post(`http://127.0.0.1:5000/about_company/create/${comapnyId}`, formData, {
+        const response = await axios.post(`https://backendproject-production-41c5.up.railway.app/create/${comapnyId}`, formData, {
           headers: {
             'Content-Type': 'application/json'
           }

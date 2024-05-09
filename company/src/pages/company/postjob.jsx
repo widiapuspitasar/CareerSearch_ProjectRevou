@@ -66,9 +66,6 @@ function Postjob() {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-  
-      console.log('Data to be submitted:', formData);
-  
       try {
         const companyId = localStorage.getItem('companyData') ? JSON.parse(localStorage.getItem('companyData')).company_id : null;
         const response = await axios.post(`https://backendproject-production-41c5.up.railway.app/company/create_job/${companyId}`, formData, {

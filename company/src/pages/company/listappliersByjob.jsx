@@ -5,7 +5,7 @@ import Maincompany from "../../component/maincompany";
 
 function ListappliersByjob() {
   const [applicants, setApplicants] = useState([]);
-  const { post_job_id } = useParams();// Ambil postJobId dari URL
+  const { post_job_id } = useParams();
 
   useEffect(() => {
     const fetchApplicantsByPostJobId = async () => {
@@ -18,7 +18,7 @@ function ListappliersByjob() {
     };
 
     fetchApplicantsByPostJobId();
-  }, [post_job_id]); // Panggil useEffect ketika postJobId berubah
+  }, [post_job_id]);
 
   return (
     <div>
@@ -26,14 +26,6 @@ function ListappliersByjob() {
         <Maincompany />
       </header>
       <section className="container rounded mt-10 mx-auto p-8 bg-[#0F2C59] relative">
-        {/* <div className="flex justify-between items-center p-4 ">
-          <div className="w-6"></div>
-          <input
-            type="text"
-            className="bg-white text-black rounded px-4 py-2 w-64"
-            placeholder="Search"
-          />
-        </div> */}
         <div className="flex justify-center relative">
           <div className="w-full sm:w-10/12 lg:w-9/12 xl:w-8/12">
             {applicants.length > 0 ? (
@@ -78,7 +70,6 @@ function ListappliersByjob() {
                     </div>
                     </div>
                 </div>
-                
             )}
           </div>
         </div>

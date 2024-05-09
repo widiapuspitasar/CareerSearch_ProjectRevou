@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Main from "../../../component/main";
-import Searchbar from "../../../component/searchbar";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import axios from 'axios';
@@ -52,22 +51,19 @@ const Detailpage = () => {
               }
           });
   
-          console.log('Apply Job Response:', response.data);
-  
           if (response.status === 200) {
               alert('Job applied successfully!');
           } else {
               alert('Failed to apply for job. Please try again later.');
           }
       } catch (error) {
-      console.error('Error applying for job:', error);
-      if (error.response && error.response.status === 401) {
-          alert('You need to login to apply for this job.');
-      } else if (error.response && error.response.status === 400 && error.response.data.message === 'Job already Apply by the user') {
-          alert('Job already Apply by the user');
-      } else {
-          alert('An error occurred. Please try again later.');
-      }
+        if (error.response && error.response.status === 401) {
+            alert('You need to login to apply for this job.');
+        } else if (error.response && error.response.status === 400) {
+            alert('Job already applied by the user');
+        } else {
+            alert('An error occurred. Please try again later.');
+        }   
   }
 };
 
@@ -151,7 +147,7 @@ const Detailpage = () => {
                     <p className='md:text-xl'>+{jobDetail.phonenumber}</p>
                 </div>
               </div>
-              {!isCompany && isLoggedIn && ( // Tampilkan tombol apply job jika pengguna bukan perusahaan dan sudah login
+              {!isCompany && isLoggedIn && (
                 <div className="flex flex-col mb-5">
                   <button onClick={applyJob} type="submit" className="bg-blue-950 text-white font-poppins px-4 py-2 rounded self-end">Apply Now</button>
                 </div>

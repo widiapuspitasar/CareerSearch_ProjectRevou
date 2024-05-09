@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import axios from 'axios';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import axios from 'axios';
 
-const Maincompany = () => {
+const MainCompany = () => {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const [userData, setUserData] = useState(null);
@@ -14,7 +14,7 @@ const Maincompany = () => {
     const [companyName, setCompanyName] = useState('');
     const [companyType, setCompanyType] = useState('');
 
-    const toggleExpandCompany = () => {
+    const toggleExpand = () => {
         const companyName = localStorage.getItem('company_name');
         const companyType = localStorage.getItem('company_type');
     
@@ -51,8 +51,7 @@ const Maincompany = () => {
         axios.get('https://backendproject-production-41c5.up.railway.app/logout')
             .then(response => {
                 console.log(response.data); 
-                localStorage.removeItem('userData');
-                localStorage.removeItem('companyData'); 
+                localStorage.clear(); 
                 setUserData(null);
                 setCompanyData(null); 
                 navigate('/'); 
@@ -64,9 +63,10 @@ const Maincompany = () => {
 
     return (
         <nav className="relative px-5 lg:px-5 pt-4 flex justify-between items-center bg-white container mx-auto">
-            <div>
-                <Link to="/"><img src="\assets\logo.png" alt="logo" className="w-32"/></Link>
+            <div className="flex items-center">
+                <Link to="/"><img src="/assets/logo.png" alt="logo" className="w-32"/></Link>
             </div>
+            
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
                 <button className="navbar-burger flex items-center text-blue-600 p-3" onClick={toggleMenu}>
@@ -77,9 +77,10 @@ const Maincompany = () => {
                 </button>
             </div>
 
+            {/* Mobile Menu */}
             {isOpen && (
-                <div className="fixed top-0 right-0 w-1/2 h-full bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="rounded-lg p-4">
+                <div className="fixed top-0 right-0 w-1/2 h-full bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 ">
+                    <div className=" rounded-lg p-4">
                         <button className="absolute top-0 right-0 m-4" onClick={closeMenu}>
                             <svg className="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1.41-1.41a.75.75 0 011.06-1.06L10 8.94l1.47-1.47a.75.75 0 111.06 1.06L11.06 10l1.47 1.47a.75.75 0 11-1.06 1.06L10 11.06l-1.47 1.47a.75.75 0 01-1.06-1.06L8.94 10 7.47 8.53a.75.75 0 011.06-1.06L10 8.94l1.47-1.47a.75.75 0 111.06 1.06L11.06 10l1.47 1.47z" clipRule="evenodd" />
@@ -93,59 +94,52 @@ const Maincompany = () => {
                                 <Link to="/listappliers" className="block px-4 py-2">List Applies</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/" className="block px-4 py-2">Profile</Link>
+                                <Link to="/profilepage"  className="block px-4 py-2">Profile</Link>
                             </li>
-                            <button onClick={handleLogout}className="font-semibold ml-4 py-2 text-lg text-white hover:text-blue-600"><Link to="/">Logout</Link></button>
-                            
+                            <li className="py-2 flex">
+                                <Link to="/profilepage"  className="block px-4 py-2">Profile</Link>
+                                <button className="font-semibold text-lg  text-white" onClick={toggleExpand}><ExpandMoreIcon /></button>
+                            </li>
                         </ul>
                     </div>
                 </div>
             )}
 
-            {isExpanded &&  (
+            {isExpanded && (
                 <div className="fixed top-0 right-0 mt-16 mr-4 bg-white rounded-lg shadow-lg p-4 z-50">
-                    
                     <div className="flex items-center">
                         <div className="mr-3">
                             <p className="font-semibold">{companyName}</p>
                             <p className="text-sm">{companyType}</p>
                         </div>
                         <div>
-                            <img src="assets/profile.png" className="w-[4rem] h-[4rem] md:w-[4rem] md:h-[4rem] object-cover" alt="Profile" />
+                            <img src="/assets/profile.png" className="w-[4rem] h-[4rem] md:w-[4rem] md:h-[4rem] object-cover" alt="Profile" />
                         </div>
                     </div>
-                    
                     <div className="flex mt-4">
                         <div className='flex flex-col items-start'>
-                        <Link to="/profilecompany"> <button className="">View Profile</button></Link>
-                        <Link to="/appliedjobspage"> <button className="">Applied Jobs</button></Link>
+                            <Link to="/profilecompany"> <button className="">View Profile</button></Link>
+                            <Link to="/appliedjobspage"> <button className="">Applied Jobs</button></Link>
                         </div>
                     </div>
                     <div className="mt-4 text-right">
-                        <button onClick={handleLogout}className="font-semibold text-lg text-blue-950 hover:text-blue-600"><Link to="/">Logout</Link></button>
+                        <button onClick={handleLogout} className="font-semibold text-lg text-blue-950 hover:text-blue-600"><Link to="/">Logout</Link></button>
                     </div>
                 </div>
             )}
-            
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end lg:ml-auto">
-                <li className="py-2">
-                    <Link to="/mainpagecompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Home</Link>
-                </li>
-                <li className="py-2">
-                    <Link to="/listappliers" className="font-semibold text-lg text-blue-950 hover:text-blue-600 mr-4">List Applies</Link>
-
-                </li>
-                
+            <ul className="hidden lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
+                <li><Link to="/mainpagecompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Home</Link></li>
+                <li><Link to="/listappliers" className="font-semibold text-lg text-blue-950 hover:text-blue-600">List Applies</Link></li>
             </ul>
-            <div className="hidden lg:flex lg:items-center">
+            <div className="hidden lg:flex lg:items-center " >
                 <ul className="hidden lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end"> 
-                    <li onClick={toggleExpandCompany}>  <AccountCircleOutlinedIcon sx={{ fontSize: 30 }}/> </li>
+                    <li onClick={toggleExpand}>  <AccountCircleOutlinedIcon sx={{ fontSize: 30 }}/> </li>
                 </ul>
             </div>
         </nav>
     );
 };
 
-export default Maincompany;
+export default MainCompany;

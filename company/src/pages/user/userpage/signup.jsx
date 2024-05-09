@@ -12,7 +12,7 @@ const Signup = () => {
         const response = await axios.post('https://backendproject-production-41c5.up.railway.app/register', values, {
             responseType: 'json' 
         });
-        console.log('Signup successful:', response.data);
+        console.log('Signup successful:');
         
         navigate('/login');
     } catch (error) {
@@ -24,8 +24,6 @@ const Signup = () => {
         alert(errorMessage);
     }
 };
-
-
 
   const formik = useFormik({
     initialValues: {
