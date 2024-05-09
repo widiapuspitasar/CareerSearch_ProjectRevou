@@ -10,15 +10,15 @@ const Homepage = () => {
         <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start items-center">
           <div className="py-12 px-6 lg:px-20">
             <h1 className="text-4xl lg:text-5xl font-bold tracking-wider leading-relaxed text-center lg:text-left">
-              Temukan Pekerjaan Impian Anda
+              Discover Your Dream Job
             </h1>
             <p className="text-2xl lg:text-3xl mt-8 lg:mt-16 font-poppins tracking-wider leading-relaxed text-center lg:text-left">
-              Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan.
+              We provide a job search platform that makes it easy for you to explore various industries, companies, and job positions
             </p>
           </div>
         </div>
         <div className="w-full lg:w-1/2 relative flex justify-center items-center">
-          <img src="assets/man_working_table.png" alt="Man working table" className="w-full max-w-xl lg:max-w-3xl h-auto" />
+          <img src="assets/homepage.png" alt="Man working table" className="w-full max-w-xl lg:max-w-3xl h-auto mr-0" />
         </div>
       </section>
       <Footer/>

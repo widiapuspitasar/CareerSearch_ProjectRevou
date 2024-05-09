@@ -1,81 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import Maincompany from "../../component/maincompany";
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import axios from 'axios';
+import Maincompany from "../../component/maincompany";
 
-const Editprofilecompany = () => {
-  const [companyData, setCompanyData] = useState({});
-  const navigate = useNavigate();
+import { Link, useNavigate } from 'react-router-dom';
 
-  const [formData, setFormData] = useState({
-    company_name: "",
-    company_type: "",
-    address: "",
-    email: "",
-    phonenumber: "",
-    about_us: ""
-  });
+const Createprofilecompany = () => {
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    const companyId = JSON.parse(localStorage.getItem('companyData')).company_id;
-    axios.get(`https://backendproject-production-41c5.up.railway.app/about_company/${companyId}`)
-      .then(response => {
-        console.log('Response from server:', response.data);
-        const companyData = response.data.data;
-        const aboutCompany = companyData.about_company && companyData.about_company.length > 0 ? companyData.about_company[0] : {};
+    const [formData, setFormData] = useState({
+        company_name: "",
+        company_type: "",
+        address: "",
+        email: "",
+        phonenumber: "",
+        about_us: ""
+    });
 
-        setFormData({
-          company_name: aboutCompany.company_name || '',
-          company_type: aboutCompany.company_type || '',
-          address: aboutCompany.address || '',
-          email: aboutCompany.email || '',
-          phonenumber: aboutCompany.phonenumber || '',
-          about_us: aboutCompany.about_us || ''
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log('Data to be submitted:', formData);
+  
+      try {
+        const comapnyId = localStorage.getItem('companyData') ? JSON.parse(localStorage.getItem('companyData')).company_id : null;
+        const response = await axios.post(`http://127.0.0.1:5000/about_company/create/${comapnyId}`, formData, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
         });
-      })
-      .catch(error => {
-        console.error('Error fetching company data:', error);
-      });
-  }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-        ...prevData,
-        [name]: value
-    }));
-};
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const companyId = JSON.parse(localStorage.getItem('companyData')).company_id;
-    try {
-        const response = await axios.put(`http://127.0.0.1:5000/about_company/edit/${companyId}`, formData, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        console.log('Profile company updated successfully:', response.data);
+        console.log('Profile created successfully:', response.data);
         navigate('/profilecompany');
-    } catch (error) {
-        console.error('Error updating profile:', error);
-    }
-};
+      } catch (error) {
+        console.error('Error creating profile:', error);
+        // Tambahkan logika penanganan error di sini
+      }
+    };
 
-  return (
+    return (
       <div className="bg-[#0F2C59] min-h-screen">
         <section>
           <Maincompany />
         </section>
         <section className='container mx-auto p-8'>
           <div className="rounded overflow-hidden shadow-lg bg-gray-100 relative">
-            {/* <Link to="/profilecompany">
-              <button  type="submit" className="absolute top-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins">Save Profile</button>
-            </Link> */}
+            <Link to="/profilecompany">
+              <button className="absolute top-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins">Save Profile</button>
+            </Link>
             <form onSubmit={handleSubmit}>
-              <div className='p-10'>
-                        <div >
+                        <div className="p-5">
                             <div className="flex flex-col mb-5">
                                 <p className="text-left text-lg font-poppins mb-4">Company Name</p>
                                 <div className="mb-4">
@@ -113,15 +89,12 @@ const Editprofilecompany = () => {
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <button type="submit" className="absolute bottom-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins" >Save Profile</button>
-                        </div>
-                </div>
-            </form>
+                        <button type="submit" className="absolute top-3 right-3 hover:bg-blue-700 bg-[#0F2C59] text-white py-2 px-4 rounded-md font-poppins">Save Profile</button>
+                    </form>
           </div>
         </section>
       </div>
     );
 };
 
-export default Editprofilecompany;
+export default Createprofilecompany;

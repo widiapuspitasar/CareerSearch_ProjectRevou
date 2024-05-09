@@ -1,16 +1,44 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import axios from 'axios';
 
 const Main = () => {
+    const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
+    const [userData, setUserData] = useState(null);
+    const [companyData, setCompanyData] = useState(null);
     const [isExpanded, setIsExpanded] = useState(false);
+    
+    const [name, setName] = useState('');
+    const [role, setRole] = useState('');
 
     const toggleExpand = () => {
-        setIsExpanded(!isExpanded);
+        const name = localStorage.getItem('name');
+        const role = localStorage.getItem('role');
+    
+        if (name && role) {
+            setIsExpanded(!isExpanded);
+            setName(name);
+            setRole(role);
+        }
+        console.log('isExpanded:', isExpanded)
     };
 
+    useEffect(() => {
+        const userDataString = localStorage.getItem('userData');
+        if (userDataString) {
+            const userData = JSON.parse(userDataString);
+            setUserData(userData);
+        }
+
+        const companyDataString = localStorage.getItem('companyData');
+        if (companyDataString) {
+            const companyData = JSON.parse(companyDataString);
+            setCompanyData(companyData);
+        }
+    }, []);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -20,12 +48,26 @@ const Main = () => {
         setIsOpen(false);
     };
 
+    const handleLogout = () => {
+        axios.get('https://backendproject-production-41c5.up.railway.app/logout')
+            .then(response => {
+                console.log(response.data); 
+                localStorage.clear(); 
+                setUserData(null);
+                setCompanyData(null); 
+                navigate('/'); 
+            })
+            .catch(error => {
+                console.error('Error logging out:', error);
+            });
+    };
+
     return (
         <nav className="relative px-5 lg:px-5 pt-4 flex justify-between items-center bg-white container mx-auto">
             
             {/* Logo */}
             <div className="flex items-center">
-                <Link to="/"><img src="assets/logo.png" alt="logo" className="w-32"/></Link>
+                <Link to="/"><img src="/assets/logo.png" alt="logo" className="w-32"/></Link>
             </div>
             
             {/* Mobile Menu Button */}
@@ -70,11 +112,11 @@ const Main = () => {
                 <div className="fixed top-0 right-0 mt-16 mr-4 bg-white rounded-lg shadow-lg p-4 z-50">
                     <div className="flex items-center">
                         <div className="mr-3">
-                            <p className="font-semibold">Lee Dohyun</p>
-                            <p className="text-sm">Software Engineering</p>
+                            <p className="font-semibold">{name}</p>
+                            <p className="text-sm">{role}</p>
                         </div>
                         <div>
-                            <img src="assets/profile.png" className="w-[4rem] h-[4rem] md:w-[4rem] md:h-[4rem] object-cover" alt="Profile" />
+                            <img src="/assets/profile.png" className="w-[4rem] h-[4rem] md:w-[4rem] md:h-[4rem] object-cover" alt="Profile" />
                         </div>
                     </div>
                     <div className="flex mt-4">
@@ -84,7 +126,7 @@ const Main = () => {
                         </div>
                     </div>
                     <div className="mt-4 text-right">
-                        <button className="font-semibold text-lg text-blue-950 hover:text-blue-600"><Link to="/">Logout</Link></button>
+                        <button onClick={handleLogout} className="font-semibold text-lg text-blue-950 hover:text-blue-600"><Link to="/">Logout</Link></button>
                     </div>
                 </div>
             )}
@@ -95,10 +137,9 @@ const Main = () => {
                 <li><Link to="/communitypage" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Community</Link></li>
                 <li><Link to="/blogpage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Blog</Link></li>
             </ul>
-            <div className="hidden lg:flex lg:items-center">
-                <ul className="flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end">
-                    <li><Link to="/Profilepage"  className="font-semibold text-lg text-blue-950 hover:text-blue-600"><AccountCircleOutlinedIcon /></Link> </li>
-                    <li><button className="font-semibold text-lg text-blue-950 hover:text-blue-600" onClick={toggleExpand}><ExpandMoreIcon /></button></li>
+            <div className="hidden lg:flex lg:items-center " >
+                <ul className="hidden lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 lg:justify-end"> 
+                    <li onClick={toggleExpand}>  <AccountCircleOutlinedIcon sx={{ fontSize: 30 }}/> </li>
                 </ul>
             </div>
         </nav>

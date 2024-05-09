@@ -18,8 +18,8 @@ const Navbar = () => {
             <div>
                 <Link to="/"><img src="assets/logo.png" alt="logo" className="w-32"/></Link>
             </div>
-            {/* Mobile Menu Icon */}
-            <div className="lg:hidden">
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden flex justify-end w-full">
                 <button className="navbar-burger flex items-center text-blue-600 p-3" onClick={toggleMenu}>
                     <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Mobile menu</title>
@@ -61,8 +61,9 @@ const Navbar = () => {
                 <li className="ml-auto"><Link to="/aboutus" className="font-semibold text-lg text-blue-950 hover:text-blue-600" >About Us</Link></li>
                 <li className="ml-auto"><Link to="/signyourcompany" className="font-semibold text-lg text-blue-950 hover:text-blue-600">Sign Your Company</Link></li>
                 <li className="ml-auto"><Link to="/login"  className="font-semibold text-lg text-blue-950 hover:text-blue-600" >Log In</Link></li>
-                <li className="ml-auto"><Link to="signup" className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-sky-950 hover:bg-blue-600 text-sm text-white font-semibold  rounded-md transition duration-200" >Sign up</Link></li>
+                <li className="ml-auto"><Link to="/signup" className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-sky-950 hover:bg-blue-600 text-sm text-white font-semibold  rounded-md transition duration-200" >Sign up</Link></li>
             </ul>
+            
             </div>
         </nav>
     );

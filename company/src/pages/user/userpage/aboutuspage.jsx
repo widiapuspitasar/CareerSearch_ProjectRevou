@@ -11,11 +11,11 @@ const Aboutus = () => {
           <div className="w-full lg:w-1/2 px-6 lg:px-20 mb-8 lg:mb-0">
             <h1 className="text-4xl lg:text-5xl font-bold tracking-wider leading-relaxed">About Us</h1>
             <p className="text-xl mt-4 lg:mt-8 font-poppins tracking-wider leading-relaxed font-light">
-              Kami menyediakan platform pencarian kerja yang memudahkan Anda menjelajahi berbagai industri, perusahaan, dan posisi pekerjaan. Bersama-sama, kita membangun dunia di mana orang-orang mendapatkan dukungan dan sumber daya yang mereka perlukan untuk mendapatkan pekerjaan yang mereka sukai.
+              We offer a job search platform that facilitates your exploration of various industries, companies, and job positions. Together, we are building a world where people receive the support and resources they need to land the jobs they love.
             </p>
           </div>
           <div className="w-full lg:w-1/2">
-            <img src="assets/sales team.png" alt="" className="w-full h-auto" />
+            <img src="assets/aboutus1.png" alt="" className="w-full h-auto" />
           </div>
         </div>
       </header>
@@ -25,28 +25,28 @@ const Aboutus = () => {
           <h1 className="text-4xl font-semibold text-white text-center mb-8">Our Members</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             <div className="flex flex-col items-center">
-              <img src="assets/testing.png" alt="Jobseeker" className="w-full h-auto md:w-[25rem] md:h-[10rem]" />
+              <img src="/assets/aboutus2.png" alt="Jobseeker" className="w-full h-auto md:w-[25rem] md:h-[19rem]" />
               <h3 className="text-2xl font-semibold mt-3 mb-3 text-white">Jobseeker</h3>
-              <p className="text-xl mb-3 text-white text-center">Seseorang yang sedang aktif mencari pekerjaan.</p>
+              <p className="text-xl mb-3 text-white text-center">Someone actively job hunting</p>
               <p className="text-blue-200 text-center">Join CareerSearch</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="assets/employees.png" alt="Employees" className="w-full h-auto md:w-[25rem] md:h-[10rem]" />
+              <img src="/assets/aboutus3.png" alt="Employees" className="w-full h-auto md:w-[25rem] md:h-[19rem]" />
               <h3 className="text-2xl font-semibold mt-3 mb-3 text-white">Employees</h3>
-              <p className="text-xl mb-3 text-white text-center">Seseorang yang ingin memberikan pengalaman bekerja dan bercerita tentang kehidupan di tempat kerja.</p>
+              <p className="text-xl mb-3 text-white text-center">Someone eager to share their work experience and tell stories about life in the workplace</p>
               <p className="text-blue-200 text-center">Join CareerSearch</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="assets/business deal.png" alt="Employer" className="w-full h-auto md:w-[25rem] md:h-[10rem]" />
+              <img src="assets/aboutus4.png" alt="Employer" className="w-full h-auto md:w-[20rem] md:h-[19rem]" />
               <h3 className="text-2xl font-semibold mt-3 mb-3 text-white">Employer</h3>
-              <p className="text-xl mb-3 text-white text-center">Perusahaan yang sedang aktif mencari karyawan baru.</p>
+              <p className="text-xl mb-3 text-white text-center">A company actively seeking new employees</p>
               <p className="text-blue-200 text-center">Join CareerSearch</p>
             </div>
           </div>
         </section>
 
         <section className="container mx-auto py-8 px-6 lg:px-20">
-          <h1 className="text-3xl font-semibold text-center mb-8 text-white">Kata mereka tentang CareerSearch</h1>
+          <h1 className="text-3xl font-semibold text-center mb-8 text-white">Their words about CareerSearch</h1>
           <div className="rounded overflow-hidden shadow-lg bg-[#F9F7F7] flex flex-col sm:flex-row p-3">
             <div className="w-full sm:w-1/3 flex flex-col items-center justify-center p-3">
               <img src="assets/user.png" className="w-64 h-64" alt="Profile" />

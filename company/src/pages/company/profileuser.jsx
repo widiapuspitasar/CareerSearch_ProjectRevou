@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Main from "../../../component/main";
-import Searchbar from "../../../component/searchbar";
+import { Link, useParams } from 'react-router-dom';
+import Maincompany from "../../component/maincompany";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import axios from 'axios';
 
-const Profilepage = () => {
+const Profileuser = () => {
   const [userData, setUserData] = useState(null);
+  const [newStatus, setNewStatus] = useState('');
+  const { user_id } = useParams();
+  const { apply_job_id } = useParams();
 
   useEffect(() => {
-    const userId = JSON.parse(localStorage.getItem('userData')).user_id;
-    axios.get(`https://backendproject-production-41c5.up.railway.app/about_user/${userId}`)
+    // const userId = JSON.parse(localStorage.getItem('userData')).user_id;
+    axios.get(`https://backendproject-production-41c5.up.railway.app/about_user/${user_id}`)
         .then(response => {
             console.log(response.data)
             setUserData(response.data.data);
@@ -25,29 +27,28 @@ const Profilepage = () => {
         });
 }, []);
 
-const renderProfileButton = () => {
-    if (!userData || !userData.about_user || userData.about_user.length === 0) {
-        return (
-            <button type="submit" className="bg-[#D9D9D9] font-poppins px-4 py-2 rounded self-end"><Link to="/createprofilepage">Create Profile</Link></button>
-        );
-    }
+const handleStatusUpdate = () => {
+  axios.put(`https://backendproject-production-41c5.up.railway.app/status_update/${user_id}/${apply_job_id}`, { status: newStatus })
+    .then(response => {
+        console.log(response.data);
+        // Tambahkan logika tambahan jika diperlukan
+    })
+    .catch(error => {
+        console.error('Error updating status:', error);
+    });
 };
 
   return (
     <div>
       <header>
-        <Main />
-        <Searchbar />
+        <Maincompany/>
       </header>
-      <section className='rounded container mt-6 mx-auto p-8 bg-[#0F2C59] font-poppins'>
-        <div className='flex gap-4 mb-3 md:w-3/4 mx-auto'>
-            {renderProfileButton()}
-            <button type="submit" className="bg-[#EADBC8] hover:bg-white font-semibold px-4 py-2 rounded self-end"><Link to="/appliedjobspage">Applied Jobs</Link></button>
-        </div>
-        <div className="rounded overflow-hidden shadow-lg bg-gray-100 p-3 md:w-3/4 mx-auto">
-          <div className='flex justify-center border-b-2 bg-[#EADBC8] '>
+      <section className='container mt-6 mx-auto p-8 bg-blue-900'>
+        
+        <div className="rounded overflow-hidden shadow-lg bg-gray-100 p-3">
+          <div className='flex justify-center border-b-2 bg-[#EADBC8]'>
             <div className="items-center mb-4 mt-4">
-              <img src="assets/profile.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover" alt="Profile" />
+              <img src="/assets/profile.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover" alt="Profile" />
             </div>
           </div>
           <div className='p-5 mt-4'>
@@ -55,11 +56,9 @@ const renderProfileButton = () => {
               <div>
                 {userData.about_user.map((about, index) => (
                   <div key={index}>
-                    <div className='text-right mb-4 mr-6'>
-                      <button type="submit" className="bg-[#0F2C59] hover:bg-blue-500 text-white font-semibold px-4 py-2 rounded self-end"><Link to="/editprofilepage">Edit Profile</Link></button>
-                    </div>
+                    
                     <div className='flex items-center flex-col'>
-                      <p className='text-2xl font-semibold'>{about.name}</p>
+                      <p className='text-2xl font-poppins'>{about.name}</p>
                       <p className='text-gray-600'>{about.role}</p>
                     </div>
                     <div>
@@ -108,6 +107,16 @@ const renderProfileButton = () => {
                 ))}
               </div>
           )}
+            <div className='text-right mb-4 mr-2 mt-5'>
+              <select className="bg-[#0F2C59] text-white font-poppins px-4 py-2 rounded self-end mr-2" value={newStatus} onChange={(e) => setNewStatus(e.target.value)}>
+                <option value="">Select status</option>
+                <option value="Submitted">Submitted</option>
+                <option value="In process">In process</option>
+                <option value="Accepted">Accepted</option>
+                <option value="Rejected">Rejected</option>
+              </select>
+              <button type="submit" className="bg-[#0F2C59] text-white font-poppins px-4 py-2 rounded self-end" onClick={handleStatusUpdate}>Update Status</button>
+            </div>
           </div>
         </div>
       </section>
@@ -115,4 +124,5 @@ const renderProfileButton = () => {
   );
 };
 
-export default Profilepage;
+
+export default Profileuser;
