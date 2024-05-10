@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Maincompany from "../../component/maincompany";
+import MainCompany from "../../component/maincompany";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
@@ -40,11 +40,11 @@ const handleStatusUpdate = () => {
   return (
     <div>
       <header>
-        <Maincompany/>
+        <MainCompany/>
       </header>
-      <section className='container mt-6 mx-auto p-8 bg-blue-900'>
+      <section className='container mt-6 mx-auto p-8 bg-[#0F2C59]'>
         
-        <div className="rounded overflow-hidden shadow-lg bg-gray-100 p-3">
+        <div className="rounded overflow-hidden shadow-lg bg-gray-100 p-3 md:w-2/3 mx-auto">
           <div className='flex justify-center border-b-2 bg-[#EADBC8]'>
             <div className="items-center mb-4 mt-4">
               <img src="/assets/profile.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover" alt="Profile" />

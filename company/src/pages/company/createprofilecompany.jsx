@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Maincompany from "../../component/maincompany";
+import MainCompany from "../../component/maincompany";
 
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -36,14 +36,13 @@ const Createprofilecompany = () => {
         navigate('/profilecompany');
       } catch (error) {
         console.error('Error creating profile:', error);
-        // Tambahkan logika penanganan error di sini
       }
     };
 
     return (
       <div className="bg-[#0F2C59] min-h-screen">
         <section>
-          <Maincompany />
+          <MainCompany />
         </section>
         <section className='container mx-auto p-8'>
           <div className="rounded overflow-hidden shadow-lg bg-gray-100 relative">

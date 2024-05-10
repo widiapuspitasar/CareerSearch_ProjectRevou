@@ -26,6 +26,7 @@ import Createprofilecompany from './pages/company/createprofilecompany';
 import Editprofilecompany from './pages/company/editprofilecompany';
 import Listappliers from './pages/company/listappliers';
 import ListappliersByjob from './pages/company/listappliersByjob';
+import CompanyProfile from './pages/user/mainpage/companyprofile';
 import '../src/App.css'
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
       <Route path="/createprofilecompany" element={<Createprofilecompany />} />
       <Route path="/listappliers" element={<Listappliers />} />
       <Route path="/listappliersByjob/:post_job_id" element={<ListappliersByjob />} />
+      <Route path="/companyprofile/:company_id" element={<CompanyProfile />} />
     </Routes>
   </Router>
   );

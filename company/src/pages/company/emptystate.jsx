@@ -1,11 +1,11 @@
 import React from "react";
-import Maincompany from "../../component/maincompany";
+import MainCompany from "../../component/maincompany";
 
 function Emptystate() {
     return (
         <div>
             <section>
-                <Maincompany />
+                <MainCompany />
             </section>
             <section className='w-full p-8 bg-[#0F2C59]'>
               <div className="container mx-auto">

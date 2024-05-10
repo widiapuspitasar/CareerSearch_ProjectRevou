@@ -3,7 +3,7 @@ import Main from "../../../component/main";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Maincompany from '../../../component/maincompany';
 
 const Detailpage = () => {
@@ -13,6 +13,7 @@ const Detailpage = () => {
   const companyData = JSON.parse(localStorage.getItem('companyData'));
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isCompany, setIsCompany] = useState(false);
+
 
   const formatDate = (dateString) => {
       const date = new Date(dateString);
@@ -29,7 +30,6 @@ const Detailpage = () => {
               console.error('Error fetching job detail:', error);
           }
       };
-
       if (post_job_id) {
           fetchJobDetail();
       }
@@ -77,11 +77,11 @@ const Detailpage = () => {
           <div className="rounded overflow-hidden shadow-lg bg-gray-100 p-3 md:w-3/4 mx-auto">
             <div className='flex border-b-2'>
               <div className="w-1/3 flex flex-col items-center mb-5">
-                <img src="/assets/company_logo.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover" alt="Profile" />
+                <Link></Link><img src="/assets/company_logo.png" className="w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem] object-cover" alt="Profile" />
               </div>
               <div className="w-2/3 flex flex-col justify-center md:pl-6">
                 <p className="text-3xl font-bold">{jobDetail.job_name}</p>
-                <p className="text-gray-600 text-xl mb-2 font-semibold">{jobDetail.company_name}</p>
+                <Link to={`/companyprofile/${jobDetail.company_id}`}><p className="text-gray-600 text-xl mb-2 font-semibold hover:text-blue-500">{jobDetail.company_name}</p></Link>
                 <p className="text-gray-600 mb-4 md:mb-0">{jobDetail.address_job}</p>
                 <p className="text-sm text-gray-600 mb-4 md:mb-0">Post Until {formatDate(jobDetail.post_until)}</p>
               </div>

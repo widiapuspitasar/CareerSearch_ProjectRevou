@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
-import Maincompany from "../../component/maincompany";
+import MainCompany from "../../component/maincompany";
 
 function Postjob() {
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ function Postjob() {
   return (
     <div>
       <section>
-        <Maincompany />
+        <MainCompany />
       </section>
       <div className="bg-[#0F2C59] min-h-screen flex flex-col items-center mt-5">
         <div className="bg-white p-8 rounded-md shadow-md max-w-xl w-full mt-8">

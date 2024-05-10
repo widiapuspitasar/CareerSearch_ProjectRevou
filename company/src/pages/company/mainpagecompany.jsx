@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import Maincompany from "../../component/maincompany";
+import MainCompany from "../../component/maincompany";
 
 function Mainpagecompany() {
   const [jobslist, setJobsList] = useState([]);
@@ -25,7 +25,7 @@ function Mainpagecompany() {
   return (
     <div>
       <header>
-        <Maincompany />
+        <MainCompany />
       </header>
 
       {isLoading && (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'; 
 import axios from 'axios';
-import Maincompany from "../../component/maincompany";
+import MainCompany from "../../component/maincompany";
 
 function Listappliers() {
   const [applicants, setApplicants] = useState([]);
@@ -20,7 +20,7 @@ function Listappliers() {
   return (
     <div>
       <header>
-        <Maincompany />
+        <MainCompany />
       </header>
       <section className="container rounded mt-10 mx-auto p-8 bg-[#0F2C59] relative">
       <div className="flex justify-between items-center p-4 ">

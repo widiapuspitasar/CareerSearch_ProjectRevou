@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Maincompany from "../../component/maincompany";
+import MainCompany from "../../component/maincompany";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -62,10 +62,10 @@ const Editprofilecompany = () => {
   return (
       <div className="bg-[#0F2C59] min-h-screen">
         <section>
-          <Maincompany />
+          <MainCompany />
         </section>
         <section className='container mx-auto p-8'>
-          <div className="rounded overflow-hidden shadow-lg bg-gray-100 relative">
+          <div className="rounded overflow-hidden shadow-lg bg-gray-100 relative md:w-2/3 mx-auto">
             <form onSubmit={handleSubmit}>
               <div className='p-10'>
                         <div >
