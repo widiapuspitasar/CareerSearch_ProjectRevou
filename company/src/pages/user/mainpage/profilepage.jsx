@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Main from "../../../component/main";
-import Searchbar from "../../../component/searchbar";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
@@ -35,7 +34,6 @@ const renderProfileButton = () => {
     <div>
       <header>
         <Main />
-        <Searchbar />
       </header>
       <section className='rounded container mt-6 mx-auto p-8 bg-[#0F2C59] font-poppins'>
         <div className='flex gap-4 mb-3 md:w-3/4 mx-auto'>
