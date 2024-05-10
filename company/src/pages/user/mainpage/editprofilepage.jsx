@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Main from "../../../component/main";
-import Searchbar from "../../../component/searchbar";
+
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
@@ -94,7 +94,6 @@ const EditProfilePage = () => {
         <div>
             <header>
                 <Main />
-                <Searchbar />
             </header>
             <section className='rounded container mt-6 mx-auto p-8 bg-[#0F2C59] font-poppins'>
                 <div className='flex gap-4 mb-3 md:w-3/4 mx-auto font-semibold'>
@@ -140,7 +139,7 @@ const EditProfilePage = () => {
                                         <div>
                                             {formData.skills && formData.skills.map((skill, index) => (
                                                 <div key={index} className="flex items-center mb-2">
-                                                    <p className="rounded overflow-hidden shadow-lg bg-[#EADBC8] flex p-3 w-60 justify-center text-gray-600">{skill}</p>
+                                                    <p className="relative w-full rounded overflow-hidden shadow-lg bg-[#EADBC8] flex p-3 md:w-60 justify-center text-gray-600">{skill}</p>
                                                     <button onClick={() => handleRemoveSkill(index)} className="ml-2">Remove</button>
                                                 </div>
                                             ))}
@@ -156,14 +155,14 @@ const EditProfilePage = () => {
                                     </div>
                                     <div>
                                         <p className='text-lg font-poppins mb-5 mt-5'>Contact Me</p>
-                                        <div className="rounded overflow-hidden shadow-lg bg-[#EADBC8] p-3 w-60 flex items-center flex-col">
+                                        <div className="rounded overflow-hidden shadow-lg bg-[#EADBC8] p-3 md:w-[20rem] flex flex-col">
                                             <div className='flex gap-2'>
                                                 <MailOutlineIcon className="h-6 w-6 text-black" />
-                                                <input type="email" name="email" value={formData.email} onChange={handleChange} className="rounded overflow-hidden bg-[#EADBC8] flex justify-center text-gray-600" placeholder="add email" />
+                                                <input type="email" name="email" value={formData.email} onChange={handleChange} className="rounded overflow-hidden bg-[#EADBC8] flex justify-start text-gray-600" placeholder="add email" />
                                             </div>
                                             <div className='flex gap-2'>
                                                 <WhatsAppIcon className="h-6 w-6 text-black" />
-                                                <input type="text" name="phonenumber" value={formData.phonenumber} onChange={handleChange} className="rounded overflow-hidden  bg-[#EADBC8] flex justify-center text-gray-600" placeholder="add number" />
+                                                <input type="text" name="phonenumber" value={formData.phonenumber} onChange={handleChange} className="rounded overflow-hidden  bg-[#EADBC8] flex text-gray-600" placeholder="add number" />
                                             </div>
                                         </div>
                                     </div>
@@ -172,7 +171,7 @@ const EditProfilePage = () => {
                                         <div className="rounded overflow-hidden shadow-lg bg-[#EADBC8] flex p-3 w-60 items-center flex-col">
                                             <div className='flex gap-2'>
                                                 <DescriptionOutlinedIcon className="h-6 w-6 text-black" />
-                                                <input type="text" name="file_resume" value={formData.file_resume} onChange={handleChange} className="rounded overflow-hidden bg-[#EADBC8] flex justify-center text-gray-600" placeholder="add resume" />
+                                                <input type="text" name="file_resume" value={formData.file_resume} onChange={handleChange} className=" relative w-full rounded overflow-hidden bg-[#EADBC8] flex justify-center text-gray-600" placeholder="add resume" />
                                             </div>
                                         </div>
                                     </div>

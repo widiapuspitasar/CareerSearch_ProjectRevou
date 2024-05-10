@@ -99,7 +99,12 @@ const Main = () => {
                             </li>
                             <li className="py-2 flex">
                                 <Link to="/profilepage"  className="block px-4 py-2">Profile</Link>
-                                <button className="font-semibold text-lg  text-white" onClick={toggleExpand}><ExpandMoreIcon /></button>
+                               
+                            </li>
+                            
+                            <li className="py-2 flex">
+                                <button onClick={handleLogout} className="font-semibold text-lg text-white hover:text-blue-600 ml-4"><Link to="/">Logout</Link></button>
+                               
                             </li>
                         </ul>
                     </div>
