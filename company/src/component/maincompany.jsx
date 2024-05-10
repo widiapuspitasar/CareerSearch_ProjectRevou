@@ -119,7 +119,7 @@ const MainCompany = () => {
                     <div className="flex mt-4">
                         <div className='flex flex-col items-start'>
                             <Link to="/profilecompany"> <button className="">View Profile</button></Link>
-                            <Link to="/appliedjobspage"> <button className="">Applied Jobs</button></Link>
+                            
                         </div>
                     </div>
                     <div className="mt-4 text-right">
