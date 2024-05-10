@@ -18,7 +18,7 @@ Welcome to CareerSearch, a modern job search platform designed to simplify the j
 - [Database Schema](#database-schema)
 - [Demo User Flow](#demo-user-flow)
 - [Demo Company Flow](#demo-company-flow)
-- [Contributing](#contributing)
+- [Link Documentation](#link-documantation)
 - [Contact](#contact)
 
 
@@ -223,10 +223,13 @@ Rest API Architecture System
 
 ![Company Create Profile](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_createprofile.png)
 
-![Company Profile]([public\assets\Readme\company_profile.png](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_profile.png))
+![Company Profile](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_profile.png)
 
-## Contributing
-Contributions are welcome! Please feel free to submit pull requests or open issues for any bugs, feature requests, or enhancements you'd like to see in CareerSearch.
+## Link Documentation
+- Documentation for the API endpoints can be found at https://documenter.getpostman.com/view/32968385/2sA3JM6Lg7
+- Documentation desain project can be found at https://www.figma.com/file/WpvtfOPKzbSDlMXgtPRI7A/Revou-Project?type=design&node-id=0%3A1&mode=design&t=gYkP2q2HtvT0jjL3-1
+- Link Web CareerSearch https://career-search-project-revou-widiapuspitasars-projects.vercel.app/
+- Documentation diagram chema https://drive.google.com/file/d/1_s7FJ5uSkqWGoiR4C-6ayNmzRFlv0Add/view?usp=sharing
 
 ## Contact
 You can contact our team via email:
