@@ -2,9 +2,6 @@
 <h2 align="center">CAREERSEARCH</h2>
 
 <p align="center">
- <center>
-  ![logo](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/logo.png?raw=true)
- <center>
 
 <h4 align="center"> GROUP C</h4>
 
@@ -122,23 +119,23 @@ Before running the application, make sure you have the following installed:
 ## Schema Application
 Class Diagram 
 
-![Class Diagram](public\assets\Readme\db-schema.png)
+![Class Diagram](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/db-schema.png).
 
 Arsitecture Diagram 
 
-![Class Diagram](public\assets\Readme\arsitecture_diagram.png)
+![Arsitecture Diagram ](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/arsitecture_diagram.png)
 
 Rest API Architecture System
 
-![Class Diagram](public\assets\Readme\rest_api_schema.png)
+![Architecture System](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/rest_api_schema.png)
 
 ## Demo User Flow
 
 ### Home Page 
-![Home Page](public\assets\Readme\home_page.png)
+![Home Page](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/home_page.png)
 
 ### About Us
-![Home Page](public\assets\Readme\aboutUs.png)
+![About Us](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/aboutUs.png)
 
 ### Registration and Login User
 1. User navigates to the registration page.
@@ -147,9 +144,9 @@ Rest API Architecture System
 4. Upon successful registration, user is redirected to the login page.
 5. User logs in using their registered email and password.
 
-![User Login](public\assets\Readme\user_login.png)
+![User Login](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/user_login.png)
 
-![User Signup](public\assets\Readme\user_signup.png)
+![User Signup](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/user_signup.png)
 
 ### Home Page User
 1. After successful login, user is automatically redirected to the home page.
@@ -158,21 +155,21 @@ Rest API Architecture System
 4. User can click on the job title to view its details.
 5. User can apply for a job by clicking the "Apply Job" button.
 
-![Company Home Page](public\assets\Readme\user_home.png)
+![User Home Page](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/user_home.png)
 
 ### Job Details Page
 1. User clicks on the job title from the home page to view its details.
 2. User sees detailed information about the job, including job description, requirements, and application process.
 3. User clicks the "Apply Job" button to apply for the job.
 
-![Company Home Page](public\assets\Readme\job_detail.png)
+![Job Details Page](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/job_detail.png)
 
 ### Favorite Jobs
 1. User can view their list of favorite jobs on the home page.
 2. User can click on the favorite job to view its details.
 3. User can click the unlove icon to remove a job from the list of favorites.
 
-![Company Home Page](public\assets\Readme\user_favorite.png)
+![Favorite Jobs](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/user_favorite.png)
 
 ### Profile Creation and Editing
 1. User clicks on the profile icon in the navigation bar to access the profile page.
@@ -180,7 +177,7 @@ Rest API Architecture System
 3. User fills out the profile information and submits the form to create a profile.
 4. User can click the "Edit Profile" button to update their profile information.
 
-![Company Home Page](public\assets\Readme\user_profile_create.png)
+![User Profile Create](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/user_profile_create.png)
 
 
 ## Demo Company  Flow
@@ -191,9 +188,9 @@ Rest API Architecture System
 4. Upon successful registration, company is redirected to the login page.
 5. Company logs in using their registered email and password.
 
-![Company Login](public\assets\Readme\company_login.png)
+![Company Login](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_login.png)
 
-![Company Signup](public\assets\Readme\company_signup.png)
+![Company Signup](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_signup.png)
 
 
 ### Company Home Page
@@ -204,9 +201,9 @@ Rest API Architecture System
 4. Company fills out the job posting form with all required information and clicks "Post" to publish the job.
 5. Newly posted job listings are displayed on the home page.
 
-![User Home Page](public\assets\Readme\company_home.png)
+![Company Home Page](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_home.png)
 
-![User Home Page](public\assets\Readme\company_post_job.png)
+![Company Post Job](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_post_job.png)
 
 ### List List Applies
 
@@ -214,9 +211,9 @@ Rest API Architecture System
 2. Company can click on an applicant's name to view their profile and application details.
 3. Company can see the applicant's profile details and update the application status accordingly.
 
-![User Home Page](public\assets\Readme\company_listapplies.png)
+![Company List Applies](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_listapplies.png)
 
-![User Home Page](public\assets\Readme\company_viewprofile.png)
+![Company View Profile](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_viewprofile.png)
 
 ### Profile Creation and Editing
 1. Company clicks on the profile icon in the navigation bar to access the profile page.
@@ -224,9 +221,9 @@ Rest API Architecture System
 3. Company fills out the profile information and submits the form to create a profile.
 4. Company can click the "Edit Profile" button to update their profile information.
 
-![User Home Page](public\assets\Readme\company_createprofile.png)
+![Company Create Profile](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_createprofile.png)
 
-![User Home Page](public\assets\Readme\company_profile.png)
+![Company Profile]([public\assets\Readme\company_profile.png](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/Readme/company_profile.png))
 
 ## Contributing
 Contributions are welcome! Please feel free to submit pull requests or open issues for any bugs, feature requests, or enhancements you'd like to see in CareerSearch.
