@@ -2,14 +2,11 @@
 <h2 align="center">CAREERSEARCH</h2>
 
 <p align="center">
- <div align="center">
+ <center>
   ![logo](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/logo.png?raw=true)
- </div>
+ <center>
 
- 
 <h4 align="center"> GROUP C</h4>
-
-![logo](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/logo.png?raw=true)
 
 ## Overview
 
