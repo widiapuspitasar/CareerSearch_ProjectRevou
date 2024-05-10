@@ -3,6 +3,7 @@
 
 <p align="center">
 <img src="public\assets\logo.png.png" width="200" height="200" />
+![logo](https://github.com/widiapuspitasar/CareerSearch_ProjectRevou/blob/main/company/public/assets/logo.png?raw=true)
  
 <h4 align="center"> GROUP C</h4>
 
