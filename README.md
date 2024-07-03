@@ -230,6 +230,7 @@ Rest API Architecture System
 - Documentation desain project can be found at https://www.figma.com/file/WpvtfOPKzbSDlMXgtPRI7A/Revou-Project?type=design&node-id=0%3A1&mode=design&t=gYkP2q2HtvT0jjL3-1
 - Link Web CareerSearch https://career-search-project-revou-widiapuspitasars-projects.vercel.app/
 - Documentation diagram chema https://drive.google.com/file/d/1_s7FJ5uSkqWGoiR4C-6ayNmzRFlv0Add/view?usp=sharing
+- Link Backend https://github.com/widiapuspitasar/backend_project
 
 ## Contact
 You can contact our team via email:
